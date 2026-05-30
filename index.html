@@ -238,75 +238,84 @@
   <main>
 
     <!-- ===================== HERO ===================== -->
-    <section class="relative flex items-center overflow-hidden" style="min-height:80vh;background:linear-gradient(135deg, #0a1628 0%, #1B2F5E 55%, #163050 100%)">
-      <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pt-36 lg:pb-24">
-        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <!-- LEFT -->
-          <div data-aos="fade-right">
-            <div class="flex items-center gap-3 mb-8">
-              <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F"></span>
-              <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.5"></span>
-              <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.25"></span>
-              <span class="text-xs font-semibold uppercase tracking-[0.2em] ml-1" style="color:#2A9D8F">Ireland &amp; Global Staffing Solutions</span>
-            </div>
-            <h1 class="font-semibold text-white mb-6 leading-tight" style="font-size:clamp(2.4rem,5vw,3.8rem)">
-              Your Trusted Partner<br>for All Your<br>Staffing Needs
-            </h1>
-            <p class="text-base sm:text-lg mb-10 max-w-md leading-relaxed" style="color:rgba(255,255,255,0.6)">
-              Connecting exceptional talent with forward-thinking organisations across healthcare, hospitality, construction, and beyond.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-7">
-              <a href="staffrequest.html" class="btn-link text-white text-base">
-                <span style="border-bottom:1px solid rgba(255,255,255,0.4)">I'm Looking for Staff</span>
-                <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-              <a href="roles.html" class="btn-link text-base" style="color:#2A9D8F">
-                <span style="border-bottom:1px solid rgba(42,157,143,0.45)">I'm Looking for a Job</span>
-                <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-              </a>
-            </div>
-          </div>
-          <!-- RIGHT: carousel -->
-          <div class="relative flex items-center justify-center" data-aos="fade-left" data-aos-delay="150">
-            <div class="absolute inset-0 blur-3xl opacity-20" style="background:radial-gradient(circle at 50% 50%, #2A9D8F, transparent 70%)"></div>
-            <div id="hero-carousel" class="relative w-full max-w-sm mx-auto" style="height:460px">
-              <div class="hero-slide active rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/480/540?random=101" alt="Healthcare professional" class="w-full h-full object-cover">
-                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
-                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Healthcare</p><p class="text-sm font-semibold text-white">Nurses &amp; HCAs</p></div>
+    <section class="bg-[#F5F7FA] pt-24 pb-10">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative overflow-hidden rounded-3xl" style="min-height:78vh;background:linear-gradient(140deg, #0a1628 0%, #1B2F5E 50%, #163050 100%)">
+
+          <!-- Inner padding wrapper -->
+          <div class="relative w-full h-full grid lg:grid-cols-2 gap-6 px-8 sm:px-12 lg:px-16 pt-14 pb-10 lg:pt-20">
+
+            <!-- LEFT: text -->
+            <div class="flex flex-col justify-center" data-aos="fade-right">
+              <div class="flex items-center gap-3 mb-7">
+                <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F"></span>
+                <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.5"></span>
+                <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.25"></span>
+                <span class="text-xs font-semibold uppercase tracking-[0.2em] ml-1" style="color:#2A9D8F">Ireland &amp; Global Staffing Solutions</span>
               </div>
-              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/480/540?random=102" alt="Hospitality professional" class="w-full h-full object-cover">
-                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
-                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Hospitality</p><p class="text-sm font-semibold text-white">Chefs &amp; Front of House</p></div>
-              </div>
-              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/480/540?random=103" alt="Construction professional" class="w-full h-full object-cover">
-                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
-                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Construction</p><p class="text-sm font-semibold text-white">Site &amp; Trade Roles</p></div>
-              </div>
-              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/480/540?random=104" alt="Social care professional" class="w-full h-full object-cover">
-                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
-                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Social Care</p><p class="text-sm font-semibold text-white">Support Workers</p></div>
-              </div>
-              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
-                <img src="https://picsum.photos/480/540?random=105" alt="Logistics professional" class="w-full h-full object-cover">
-                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
-                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Logistics &amp; More</p><p class="text-sm font-semibold text-white">Drivers &amp; Warehouse</p></div>
-              </div>
-              <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2 items-center">
-                <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
-                <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
-                <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
-                <button class="carousel-dot" data-idx="3" aria-label="Slide 4"></button>
-                <button class="carousel-dot" data-idx="4" aria-label="Slide 5"></button>
+              <h1 class="font-semibold text-white mb-6" style="font-size:clamp(2.2rem,4.5vw,3.6rem);line-height:1.08">
+                Your Trusted<br>Partner for All<br>Your Staffing Needs
+              </h1>
+              <p class="text-base mb-10 max-w-md leading-relaxed" style="color:rgba(255,255,255,0.6)">
+                Connecting exceptional talent with forward-thinking organisations across healthcare, hospitality, construction, and beyond.
+              </p>
+              <div class="flex flex-col sm:flex-row gap-7">
+                <a href="staffrequest.html" class="btn-link text-white text-base">
+                  <span style="border-bottom:1px solid rgba(255,255,255,0.4)">I'm Looking for Staff</span>
+                  <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+                <a href="roles.html" class="btn-link text-base" style="color:#2A9D8F">
+                  <span style="border-bottom:1px solid rgba(42,157,143,0.45)">I'm Looking for a Job</span>
+                  <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
               </div>
             </div>
+
+            <!-- RIGHT: carousel — no border, no container, just PNG cutouts -->
+            <div class="relative flex items-end justify-center" data-aos="fade-left" data-aos-delay="120">
+              <div id="hero-carousel" class="relative w-full" style="height:520px">
+
+                <div class="hero-slide absolute inset-0 flex items-end justify-center">
+                  <img src="assets/images/h1.png" alt="Healthcare professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Healthcare</p><p class="text-sm font-semibold text-white">Nurses &amp; HCAs</p></div>
+                </div>
+
+                <div class="hero-slide absolute inset-0 flex items-end justify-center">
+                  <img src="assets/images/h2.png" alt="Hospitality professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Hospitality</p><p class="text-sm font-semibold text-white">Chefs &amp; Front of House</p></div>
+                </div>
+
+                <div class="hero-slide absolute inset-0 flex items-end justify-center">
+                  <img src="assets/images/h3.png" alt="Construction professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Construction</p><p class="text-sm font-semibold text-white">Site &amp; Trade Roles</p></div>
+                </div>
+
+                <div class="hero-slide absolute inset-0 flex items-end justify-center">
+                  <img src="assets/images/h4.png" alt="Social care professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Social Care</p><p class="text-sm font-semibold text-white">Support Workers</p></div>
+                </div>
+
+                <div class="hero-slide absolute inset-0 flex items-end justify-center">
+                  <img src="assets/images/h5.png" alt="Logistics professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Logistics &amp; More</p><p class="text-sm font-semibold text-white">Drivers &amp; Warehouse</p></div>
+                </div>
+
+                <!-- Dots -->
+                <div class="absolute -bottom-2 left-0 flex gap-2 items-center">
+                  <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
+                  <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
+                  <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
+                  <button class="carousel-dot" data-idx="3" aria-label="Slide 4"></button>
+                  <button class="carousel-dot" data-idx="4" aria-label="Slide 5"></button>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
     </section>
+
     <!-- ===================== TRUST BAR ===================== -->
     <div style="background-color:#111e38;border-top:1px solid rgba(42,157,143,0.2)">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
