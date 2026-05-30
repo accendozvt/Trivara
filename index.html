@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trivara Staffing Solutions Ltd — Your Trusted Partner</title>
+  <meta name="description" content="Trivara Staffing Solutions Ltd connects businesses with exceptional talent across healthcare, hospitality, construction and more. Ireland-wide and global staffing solutions." />
+  <meta property="og:title" content="Trivara Staffing Solutions Ltd — Your Trusted Partner" />
+  <meta property="og:description" content="Your trusted partner for all your staffing needs. Agency staffing, overseas recruitment, and permanent placement across Ireland and beyond." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#1B2F5E',
+            teal: '#2A9D8F',
+            gold: '#E9C46A',
+            lightbg: '#F5F7FA'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .role-pill { display: block; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; text-align: center; color: #4A5568; background-color: #F5F7FA; border: 1px solid #e2e8f0; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .role-pill:hover { background-color: #2A9D8F; color: white; border-color: #2A9D8F; }
+  </style>
+</head>
+<body class="bg-white text-[#4A5568]">
+
+  <!-- ===================== HEADER ===================== -->
+  <header id="site-header" class="fixed top-0 left-0 right-0 z-50 bg-white transition-shadow duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
+          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#2A9D8F">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="leading-tight">
+            <div class="font-extrabold text-lg tracking-wider" style="color:#1B2F5E">TRIVARA</div>
+            <div class="font-semibold text-xs" style="color:#2A9D8F">Staffing Solutions Ltd</div>
+            <div class="text-gray-400 text-[10px] hidden sm:block">Your Trusted Partner for All Your Staffing Needs</div>
+          </div>
+        </a>
+        <!-- Desktop Nav -->
+        <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+          <a href="index.html" class="text-sm font-medium text-gray-600 hover:text-[#2A9D8F] transition-colors duration-200 py-1 border-b-2 border-transparent hover:border-[#2A9D8F]">Home</a>
+          <a href="about.html" class="text-sm font-medium text-gray-600 hover:text-[#2A9D8F] transition-colors duration-200 py-1 border-b-2 border-transparent hover:border-[#2A9D8F]">About Us</a>
+          <div class="relative" id="roles-dropdown-wrapper">
+            <button id="roles-btn" class="text-sm font-medium text-gray-600 hover:text-[#2A9D8F] transition-colors duration-200 py-1 border-b-2 border-transparent hover:border-[#2A9D8F] flex items-center gap-1" aria-expanded="false" aria-haspopup="true">
+              Roles
+              <svg id="roles-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div id="roles-mega-menu" class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[680px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 hidden" role="menu">
+              <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45"></div>
+              <div class="mb-5">
+                <p class="text-xs font-bold uppercase tracking-widest mb-3 pb-2 border-b-2" style="color:#2A9D8F;border-color:#2A9D8F">Healthcare</p>
+                <div class="grid grid-cols-4 gap-2">
+                  <a href="contact.html?role=Nurse" class="role-pill">Nurse</a>
+                  <a href="contact.html?role=HCA" class="role-pill">HCA</a>
+                  <a href="contact.html?role=Physiotherapist" class="role-pill">Physiotherapist</a>
+                  <a href="contact.html?role=Social+Care+Worker" class="role-pill">Social Care Worker</a>
+                  <a href="contact.html?role=Pharmacist" class="role-pill">Pharmacist</a>
+                  <a href="contact.html?role=Occupational+Therapist" class="role-pill">Occupational Therapist</a>
+                  <a href="contact.html?role=Radiologist" class="role-pill">Radiologist</a>
+                  <a href="contact.html?role=Psychologist" class="role-pill">Psychologist</a>
+                </div>
+              </div>
+              <div class="mb-5">
+                <p class="text-xs font-bold uppercase tracking-widest mb-3 pb-2 border-b-2" style="color:#E9C46A;border-color:#E9C46A">Hospitality</p>
+                <div class="grid grid-cols-4 gap-2">
+                  <a href="contact.html?role=Housekeeping" class="role-pill">Housekeeping</a>
+                  <a href="contact.html?role=Chef" class="role-pill">Chef</a>
+                  <a href="contact.html?role=Waiter" class="role-pill">Waiter</a>
+                </div>
+              </div>
+              <div>
+                <p class="text-xs font-bold uppercase tracking-widest mb-3 pb-2 border-b-2" style="color:#1B2F5E;border-color:#1B2F5E">Other Sectors</p>
+                <div class="grid grid-cols-4 gap-2">
+                  <a href="contact.html?role=Logistics" class="role-pill">Logistics</a>
+                  <a href="contact.html?role=Construction" class="role-pill">Construction</a>
+                  <a href="contact.html?role=Marketing+%26+Media" class="role-pill">Marketing &amp; Media</a>
+                  <a href="contact.html?role=Sales+%26+Accountant" class="role-pill">Sales &amp; Accountant</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="contact.html" class="text-sm font-medium text-gray-600 hover:text-[#2A9D8F] transition-colors duration-200 py-1 border-b-2 border-transparent hover:border-[#2A9D8F]">Contact</a>
+        </nav>
+        <!-- Social + Hamburger -->
+        <div class="flex items-center gap-4">
+          <div class="hidden lg:flex items-center gap-3">
+            <a href="#" aria-label="Facebook" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Instagram" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+          <button id="hamburger-btn" class="lg:hidden p-2 rounded-lg" style="color:#1B2F5E" aria-label="Open navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="8" x2="21" y2="8"/><line x1="3" y1="16" x2="21" y2="16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed inset-0 z-40 lg:hidden" style="display:none">
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/50"></div>
+    <div id="mobile-panel" class="absolute right-0 top-0 h-full w-72 flex flex-col pt-6 px-6 transform translate-x-full transition-transform duration-300" style="background-color:#1B2F5E">
+      <div class="flex justify-between items-center mb-8">
+        <span class="text-white font-bold text-lg">Menu</span>
+        <button id="close-menu-btn" class="text-white p-2 -mr-2" aria-label="Close menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1" aria-label="Mobile navigation">
+        <a href="index.html" class="text-white/80 hover:text-white py-3 border-b border-white/10 font-medium text-sm">Home</a>
+        <a href="about.html" class="text-white/80 hover:text-white py-3 border-b border-white/10 font-medium text-sm">About Us</a>
+        <a href="roles.html" class="text-white/80 hover:text-white py-3 border-b border-white/10 font-medium text-sm">Roles</a>
+        <a href="contact.html" class="text-white/80 hover:text-white py-3 border-b border-white/10 font-medium text-sm">Contact</a>
+      </nav>
+      <div class="mt-8 flex gap-4">
+        <a href="#" aria-label="Facebook" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="LinkedIn" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Instagram" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="relative min-h-screen flex items-center overflow-hidden" style="background: linear-gradient(135deg, #0d1b35 0%, #1B2F5E 50%, #163050 100%);">
+      <!-- Background image -->
+      <div class="absolute inset-0">
+        <img src="https://picsum.photos/1600/900?random=10" alt="" class="w-full h-full object-cover opacity-30" style="mix-blend-mode:overlay" />
+      </div>
+      <!-- Gradient overlay for depth -->
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(13,27,53,0.85) 0%, rgba(13,27,53,0.3) 100%)"></div>
+
+      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24 w-full">
+        <div class="max-w-3xl" data-aos="fade-up">
+          <!-- Badge -->
+          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8" style="background-color:rgba(42,157,143,0.2); border:1px solid rgba(42,157,143,0.4)">
+            <span class="w-2 h-2 rounded-full flex-shrink-0" style="background-color:#2A9D8F"></span>
+            <span class="text-sm font-semibold" style="color:#2A9D8F">Ireland &amp; Global Staffing Solutions</span>
+          </div>
+
+          <!-- H1 -->
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
+            Your Trusted Partner for All Your Staffing Needs
+          </h1>
+
+          <!-- Sub -->
+          <p class="text-lg sm:text-xl text-white/70 mb-10 max-w-xl leading-relaxed">
+            Connecting exceptional talent with forward-thinking organisations — across healthcare, hospitality, construction, and beyond. Fast, fully vetted, fully compliant.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a href="staffrequest.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:scale-105" style="background-color:#1B2F5E; color:white; border:2px solid white;">
+              I'm Looking for Staff &rarr;
+            </a>
+            <a href="roles.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base text-white transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#1B2F5E]" style="background-color:transparent; border:2px solid white;">
+              I'm Looking for a Job &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TRUST BAR ===================== -->
+    <div style="background-color:#111e38;border-top:1px solid rgba(42,157,143,0.2)">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-wrap items-stretch divide-x divide-white/10">
+          <div class="flex items-center gap-3 px-5 sm:px-9 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-white font-semibold text-xs sm:text-sm tracking-wide whitespace-nowrap">HIQA-Aligned Standards</span>
+          </div>
+          <div class="flex items-center gap-3 px-5 sm:px-9 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-white font-semibold text-xs sm:text-sm tracking-wide whitespace-nowrap">Fully Vetted Professionals</span>
+          </div>
+          <div class="flex items-center gap-3 px-5 sm:px-9 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-white font-semibold text-xs sm:text-sm tracking-wide whitespace-nowrap">Compliance Managed</span>
+          </div>
+          <div class="flex items-center gap-3 px-5 sm:px-9 py-4">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-white font-semibold text-xs sm:text-sm tracking-wide whitespace-nowrap">Ireland-Wide Coverage</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="bg-white py-20 lg:py-28">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+          <!-- Left -->
+          <div data-aos="fade-right">
+            <p class="text-xs font-bold uppercase tracking-widest mb-4" style="color:#2A9D8F">Why Trivara</p>
+            <h2 class="text-4xl font-extrabold leading-tight mb-6" style="color:#1B2F5E">
+              The Right People.<br />The Right Roles.<br />Every Time.
+            </h2>
+            <p class="text-[#4A5568] leading-relaxed mb-5">
+              At Trivara Staffing Solutions, we understand that finding the right person for the right role isn't just about matching CVs to job descriptions. It's about understanding organisational culture, sector nuances, compliance requirements, and the very real human element that underpins every successful hire.
+            </p>
+            <p class="text-[#4A5568] leading-relaxed mb-8">
+              With deep expertise across healthcare, hospitality, logistics, construction, and professional sectors, our team works tirelessly to source, vet, and place professionals who not only meet requirements but genuinely excel — giving organisations the confidence to grow and candidates the opportunity to thrive.
+            </p>
+            <blockquote class="border-l-4 pl-5 mb-8 italic text-[#4A5568]" style="border-color:#E9C46A">
+              "We don't just fill vacancies — we build partnerships that transform organisations and advance careers."
+            </blockquote>
+            <a href="about.html" class="inline-flex items-center gap-2 font-semibold transition-colors duration-200 hover:underline" style="color:#2A9D8F">
+              Learn more about us
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+
+          <!-- Right -->
+          <div class="relative" data-aos="fade-left">
+            <img src="https://picsum.photos/600/500?random=20" alt="Professionals working together" class="w-full rounded-2xl shadow-2xl object-cover" />
+            <!-- Badge overlay -->
+            <div class="absolute -bottom-6 -left-6 rounded-2xl shadow-xl px-6 py-4 flex items-center gap-3" style="background-color:#2A9D8F">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <div>
+                <div class="text-white font-extrabold text-xl leading-none">100%</div>
+                <div class="text-white/80 text-xs font-medium">Vetted Professionals</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section style="background-color:#F5F7FA" class="py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Title -->
+        <div class="text-center mb-14" data-aos="fade-up">
+          <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#2A9D8F">What We Offer</p>
+          <h2 class="text-4xl font-extrabold" style="color:#1B2F5E">Our Services</h2>
+          <p class="mt-4 text-[#4A5568] max-w-xl mx-auto">Flexible, end-to-end staffing solutions tailored to your industry and your needs.</p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Card 1: Agency Staffing -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="0">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1b35 0%, #1B2F5E 100%)"></div>
+              <img src="https://picsum.photos/600/300?random=31" alt="Agency Staffing" class="w-full h-full object-cover opacity-40" style="mix-blend-mode:overlay" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-90"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+            </div>
+            <div class="p-7 relative">
+              <span class="absolute top-2 right-5 font-black text-7xl leading-none select-none pointer-events-none" style="color:rgba(27,47,94,0.05)">01</span>
+              <h3 class="text-xl font-bold mb-3" style="color:#1B2F5E">Agency Staffing</h3>
+              <p class="text-[#4A5568] text-sm leading-relaxed mb-5">Trivara Staffing Solutions operates with a robust governance structure and a deep commitment to operational excellence. We partner with organisations nationwide, supplying competent, fully vetted, and dependable temporary staff for short-term, sustained, and urgent staffing needs. Our service model is anchored in rigorous compliance standards, guaranteeing a seamless, high-quality, and reliable workforce across all industry sectors.</p>
+              <a href="contact.html?type=Agency+Staffing" class="inline-flex items-center gap-1 text-sm font-semibold hover:underline" style="color:#2A9D8F">
+                Learn More &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2: Overseas Recruitment -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0" style="background: linear-gradient(135deg, #163050 0%, #2A9D8F 100%)"></div>
+              <img src="https://picsum.photos/600/300?random=32" alt="Overseas Recruitment" class="w-full h-full object-cover opacity-40" style="mix-blend-mode:overlay" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-90"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </div>
+            </div>
+            <div class="p-7 relative">
+              <span class="absolute top-2 right-5 font-black text-7xl leading-none select-none pointer-events-none" style="color:rgba(42,157,143,0.07)">02</span>
+              <h3 class="text-xl font-bold mb-3" style="color:#1B2F5E">Overseas Recruitment of Nurses &amp; HCAs</h3>
+              <p class="text-[#4A5568] text-sm leading-relaxed mb-5">Trivara Staffing Solutions delivers a refined and strategically managed approach to international healthcare recruitment. We source highly skilled Nurses and Healthcare Assistants from overseas, partnering with private nursing homes and healthcare facilities across Ireland to provide access to exceptional, fully vetted professionals. Our recruitment division oversees every stage of the process — from targeted talent identification and rigorous screening to seamless placement — ensuring a compliant, efficient, and well-supported transition for both clients and candidates.</p>
+              <a href="contact.html?type=Overseas+Recruitment" class="inline-flex items-center gap-1 text-sm font-semibold hover:underline" style="color:#2A9D8F">
+                Learn More &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3: Permanent Placement -->
+          <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-48 overflow-hidden">
+              <div class="absolute inset-0" style="background: linear-gradient(135deg, #1B2F5E 0%, #E9C46A 100%)"></div>
+              <img src="https://picsum.photos/600/300?random=33" alt="Permanent Placement" class="w-full h-full object-cover opacity-30" style="mix-blend-mode:overlay" />
+              <div class="absolute inset-0 flex items-center justify-center">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-90"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+              </div>
+            </div>
+            <div class="p-7 relative">
+              <span class="absolute top-2 right-5 font-black text-7xl leading-none select-none pointer-events-none" style="color:rgba(233,196,106,0.15)">03</span>
+              <h3 class="text-xl font-bold mb-3" style="color:#1B2F5E">Permanent Roles</h3>
+              <p class="text-[#4A5568] text-sm leading-relaxed mb-5">We provide strategic permanent recruitment solutions, connecting organisations with skilled, long-term professionals who support stability, growth, and sustained operational performance.</p>
+              <a href="contact.html?type=Permanent+Placement" class="inline-flex items-center gap-1 text-sm font-semibold hover:underline" style="color:#2A9D8F">
+                Learn More &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW WE WORK ===================== -->
+    <section class="bg-white py-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Title -->
+        <div class="text-center mb-16" data-aos="fade-up">
+          <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#2A9D8F">Our Process</p>
+          <h2 class="text-4xl font-extrabold" style="color:#1B2F5E">How We Work</h2>
+          <p class="mt-4 text-[#4A5568] max-w-lg mx-auto">A clear, proven process that delivers results — whether you need local cover or international talent.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+
+          <!-- Agency Placements -->
+          <div data-aos="fade-right">
+            <h3 class="text-2xl font-bold mb-8 pb-3 border-b-2" style="color:#1B2F5E; border-color:#2A9D8F">Agency Placements</h3>
+            <div class="space-y-0">
+
+              <!-- Step 1 -->
+              <div class="flex gap-5 relative">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">1</div>
+                  <div class="w-0.5 flex-1 mt-1" style="background-color:#2A9D8F; min-height:3rem"></div>
+                </div>
+                <div class="pb-10">
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Understand Your Needs</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">We begin with a thorough consultation to understand your staffing requirements, organisational culture, compliance obligations, and timeline — ensuring we find candidates who truly fit.</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex gap-5 relative">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">2</div>
+                  <div class="w-0.5 flex-1 mt-1" style="background-color:#2A9D8F; min-height:3rem"></div>
+                </div>
+                <div class="pb-10">
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Source &amp; Screen</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">Our experienced team draws on an extensive talent network and active database to source candidates. Each applicant undergoes rigorous reference checks, skills assessment, and compliance verification.</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex gap-5 relative">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">3</div>
+                  <div class="w-0.5 flex-1 mt-1" style="background-color:#2A9D8F; min-height:3rem"></div>
+                </div>
+                <div class="pb-10">
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Match &amp; Present</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">We present a shortlist of thoroughly vetted candidates tailored to your role, along with detailed profiles. You make the final decision — we handle coordination and scheduling.</p>
+                </div>
+              </div>
+
+              <!-- Step 4 (no line after) -->
+              <div class="flex gap-5">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg" style="background-color:#2A9D8F">4</div>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Placement &amp; Support</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">Once placed, we remain your point of contact. We follow up to ensure the placement is working well for both parties and provide ongoing support for the duration of the engagement.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Overseas Recruitment -->
+          <div data-aos="fade-left">
+            <h3 class="text-2xl font-bold mb-8 pb-3 border-b-2" style="color:#1B2F5E; border-color:#E9C46A">Overseas Recruitment</h3>
+            <div class="space-y-0">
+
+              <!-- Step 1 -->
+              <div class="flex gap-5 relative">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">1</div>
+                  <div class="w-0.5 flex-1 mt-1" style="background-color:#E9C46A; min-height:3rem"></div>
+                </div>
+                <div class="pb-10">
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Initial Assessment</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">We assess your workforce gap, identify the most suitable sourcing regions, and establish a clear plan covering timelines, costs, compliance requirements, and OET (Occupational English Test) preparation guidance for healthcare professionals.</p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex gap-5 relative">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">2</div>
+                  <div class="w-0.5 flex-1 mt-1" style="background-color:#E9C46A; min-height:3rem"></div>
+                </div>
+                <div class="pb-10">
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Global Talent Search</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">Leveraging our international recruitment network, we identify and screen qualified candidates from key talent markets. All candidates are assessed against your exacting standards before shortlisting.</p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div class="flex gap-5 relative">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">3</div>
+                  <div class="w-0.5 flex-1 mt-1" style="background-color:#E9C46A; min-height:3rem"></div>
+                </div>
+                <div class="pb-10">
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Visa &amp; Compliance</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">We manage all immigration documentation, work permit applications, and regulatory compliance requirements — reducing administrative burden and ensuring a smooth, lawful transition for every candidate.</p>
+                </div>
+              </div>
+
+              <!-- Step 4 (no line after) -->
+              <div class="flex gap-5">
+                <div class="flex flex-col items-center flex-shrink-0">
+                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg" style="background-color:#E9C46A">4</div>
+                </div>
+                <div>
+                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Arrival &amp; Integration</h4>
+                  <p class="text-[#4A5568] text-sm leading-relaxed">We support candidates through relocation, induction, and early integration — ensuring they settle into their new roles and environments effectively. We remain a resource for both employer and employee throughout.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT FORM ===================== -->
+    <section id="contact" class="py-20 lg:py-28" style="background-color:#0c1a30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 lg:gap-20 items-start">
+
+          <!-- Left: editorial copy + contact info -->
+          <div class="lg:col-span-2 lg:pt-2" data-aos="fade-right">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="h-px w-8 flex-shrink-0" style="background-color:#2A9D8F"></div>
+              <span class="text-xs font-bold uppercase tracking-[0.18em]" style="color:#2A9D8F">Get in Touch</span>
+            </div>
+            <h2 class="font-black mb-6 text-white" style="font-size:clamp(3.2rem,6vw,5.5rem);line-height:0.92">
+              Let's<br><span style="color:#2A9D8F">Talk.</span>
+            </h2>
+            <p class="leading-relaxed mb-10 max-w-xs text-sm" style="color:rgba(255,255,255,0.55)">Whether you're an employer looking for the right people, or a professional ready for your next step — we're here.</p>
+            <div class="space-y-5">
+              <a href="mailto:info@trivara.ie" class="flex items-center gap-4 group">
+                <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.35)">Email us</p>
+                  <p class="text-sm font-semibold text-white group-hover:text-[#2A9D8F] transition-colors">info@trivara.ie</p>
+                </div>
+              </a>
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.35)">Call us</p>
+                  <p class="text-sm font-semibold text-white">+353 (0) XX XXX XXXX</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.35)">Based</p>
+                  <p class="text-sm font-semibold text-white">Ireland &amp; International</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
+            <div class="bg-white rounded-xl p-8 sm:p-10" style="box-shadow:0 25px 50px -12px rgba(0,0,0,0.35)">
+              <h3 class="text-xl font-bold mb-1" style="color:#1B2F5E">Send Us a Message</h3>
+              <p class="text-sm mb-8" style="color:#9CA3AF">We'll get back to you within one business day.</p>
+
+              <form id="home-contact-form" novalidate>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="hc-name" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Full Name <span class="text-red-400">*</span></label>
+                    <input type="text" id="hc-name" name="name" required placeholder="Your name" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
+                    <p class="hc-err hidden text-xs text-red-500 mt-1">Please enter your name.</p>
+                  </div>
+                  <div>
+                    <label for="hc-email" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Email <span class="text-red-400">*</span></label>
+                    <input type="email" id="hc-email" name="email" required placeholder="you@email.com" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
+                    <p class="hc-err hidden text-xs text-red-500 mt-1">Please enter a valid email.</p>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="hc-phone" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Phone <span class="text-red-400">*</span></label>
+                    <input type="tel" id="hc-phone" name="phone" required placeholder="+353..." class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
+                    <p class="hc-err hidden text-xs text-red-500 mt-1">Please enter your phone number.</p>
+                  </div>
+                  <div>
+                    <label for="hc-type" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Enquiry Type <span class="text-red-400">*</span></label>
+                    <select id="hc-type" name="type" required class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
+                      <option value="" disabled selected>Select type...</option>
+                      <option>Agency Staffing Enquiry</option>
+                      <option>Overseas Recruitment – Nurses &amp; HCAs</option>
+                      <option>Permanent Placement</option>
+                      <option>General Enquiry</option>
+                      <option>I'm Looking for a Job</option>
+                    </select>
+                    <p class="hc-err hidden text-xs text-red-500 mt-1">Please select an enquiry type.</p>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label for="hc-message" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Message</label>
+                  <textarea id="hc-message" name="message" rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all resize-none" style="color:#1B2F5E"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-full font-bold text-white text-sm tracking-wide transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-[0.99]" style="background-color:#1B2F5E">
+                  Send Message →
+                </button>
+              </form>
+
+              <div id="home-form-success" class="hidden text-center py-10">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color:rgba(42,157,143,0.1)">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h4 class="text-lg font-bold mb-2" style="color:#1B2F5E">Message Sent!</h4>
+                <p class="text-sm" style="color:#9CA3AF">A member of our team will be in touch shortly.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA BANNER ===================== -->
+    <section class="py-16" style="background: linear-gradient(135deg, #0d1b35 0%, #1B2F5E 60%, #163050 100%)">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
+        <h2 class="text-4xl font-extrabold text-white mb-4">Ready to Find the Right People?</h2>
+        <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto">Whether you need one specialist or a team of fifty, Trivara is ready to deliver. Let's talk about your staffing needs.</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="staffrequest.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 hover:opacity-90" style="background-color:white; color:#1B2F5E;">
+            Request Staff Now
+          </a>
+          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base text-white transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#1B2F5E]" style="border:2px solid white; background-color:transparent;">
+            Get in Touch
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer style="background-color:#1B2F5E">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- 4-column grid -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pt-14 pb-12 border-b border-white/10">
+
+        <!-- Brand -->
+        <div class="col-span-2 lg:col-span-1">
+          <a href="index.html" class="flex items-center gap-3 mb-5">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#2A9D8F">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div>
+              <div class="text-white font-extrabold text-base tracking-wider">TRIVARA</div>
+              <div class="text-xs font-semibold" style="color:#2A9D8F">Staffing Solutions Ltd</div>
+            </div>
+          </a>
+          <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.42);max-width:210px">Your trusted partner for all your staffing needs — Ireland and globally.</p>
+          <div class="flex items-center gap-4">
+            <a href="#" aria-label="Facebook" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="LinkedIn" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+            <a href="#" aria-label="Instagram" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          </div>
+        </div>
+
+        <!-- Navigate -->
+        <div>
+          <h5 class="text-white font-bold text-xs uppercase tracking-[0.14em] mb-5">Navigate</h5>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Home</a></li>
+            <li><a href="about.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">About Us</a></li>
+            <li><a href="roles.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Roles</a></li>
+            <li><a href="contact.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Contact</a></li>
+            <li><a href="staffrequest.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Request Staff</a></li>
+            <li><a href="enquiry.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Role Enquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h5 class="text-white font-bold text-xs uppercase tracking-[0.14em] mb-5">Services</h5>
+          <ul class="space-y-3">
+            <li><a href="contact.html?type=Agency+Staffing+Enquiry" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Agency Staffing</a></li>
+            <li><a href="contact.html?type=Overseas+Recruitment" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Overseas Recruitment</a></li>
+            <li><a href="contact.html?type=Permanent+Placement" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Permanent Roles</a></li>
+            <li><a href="roles.html" class="text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">Browse All Roles</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h5 class="text-white font-bold text-xs uppercase tracking-[0.14em] mb-5">Contact</h5>
+          <ul class="space-y-4">
+            <li>
+              <a href="mailto:info@trivara.ie" class="flex items-start gap-3 text-sm transition-colors hover:text-white" style="color:rgba(255,255,255,0.48)">
+                <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                info@trivara.ie
+              </a>
+            </li>
+            <li class="flex items-start gap-3 text-sm" style="color:rgba(255,255,255,0.48)">
+              <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              +353 (0) XX XXX XXXX
+            </li>
+            <li class="flex items-start gap-3 text-sm" style="color:rgba(255,255,255,0.48)">
+              <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Ireland &amp; International
+            </li>
+          </ul>
+        </div>
+
+      </div>
+      <!-- Bottom bar -->
+      <div class="flex flex-col sm:flex-row items-center justify-between gap-3 py-6">
+        <p class="text-xs" style="color:rgba(255,255,255,0.3)">© 2025 Trivara Staffing Solutions Ltd. All rights reserved.</p>
+        <div class="flex items-center gap-6">
+          <a href="privacy.html" class="text-xs transition-colors hover:text-[#2A9D8F]" style="color:rgba(255,255,255,0.3)">Privacy Policy</a>
+          <a href="terms.html" class="text-xs transition-colors hover:text-[#2A9D8F]" style="color:rgba(255,255,255,0.3)">Terms &amp; Conditions</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true, offset: 80 });
+
+    // Sticky header shadow on scroll
+    const siteHeader = document.getElementById('site-header');
+    window.addEventListener('scroll', () => {
+      siteHeader.classList.toggle('shadow-lg', window.scrollY > 20);
+    });
+
+    // Mobile menu
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobilePanel = document.getElementById('mobile-panel');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileBackdrop = document.getElementById('mobile-backdrop');
+
+    function openMobileMenu() {
+      mobileMenu.style.display = 'block';
+      document.body.style.overflow = 'hidden';
+      requestAnimationFrame(() => requestAnimationFrame(() => mobilePanel.classList.remove('translate-x-full')));
+    }
+    function closeMobileMenu() {
+      mobilePanel.classList.add('translate-x-full');
+      document.body.style.overflow = '';
+      setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
+    }
+    hamburgerBtn.addEventListener('click', openMobileMenu);
+
+    // Home page contact form
+    const homeForm = document.getElementById('home-contact-form');
+    if (homeForm) {
+      const hcFields = [
+        { id:'hc-name',  check: v => v.trim().length > 0 },
+        { id:'hc-email', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+        { id:'hc-phone', check: v => v.trim().length > 0 },
+        { id:'hc-type',  check: v => v !== '' }
+      ];
+      hcFields.forEach(f => {
+        const el = document.getElementById(f.id);
+        el.addEventListener('input', () => {
+          el.classList.remove('border-red-400');
+          el.nextElementSibling.classList.add('hidden');
+        });
+      });
+      homeForm.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        hcFields.forEach(f => {
+          const el = document.getElementById(f.id);
+          const err = el.nextElementSibling;
+          if (!f.check(el.value)) { el.classList.add('border-red-400'); err.classList.remove('hidden'); valid = false; }
+          else { el.classList.remove('border-red-400'); err.classList.add('hidden'); }
+        });
+        if (valid) {
+          homeForm.classList.add('hidden');
+          document.getElementById('home-form-success').classList.remove('hidden');
+        }
+      });
+    }
+    closeMenuBtn.addEventListener('click', closeMobileMenu);
+    mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+    // Roles dropdown
+    const rolesBtn = document.getElementById('roles-btn');
+    const rolesMegaMenu = document.getElementById('roles-mega-menu');
+    const rolesChevron = document.getElementById('roles-chevron');
+    if (rolesBtn) {
+      rolesBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = !rolesMegaMenu.classList.contains('hidden');
+        rolesMegaMenu.classList.toggle('hidden', isOpen);
+        rolesBtn.setAttribute('aria-expanded', String(!isOpen));
+        rolesChevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+      });
+      document.addEventListener('click', () => {
+        rolesMegaMenu.classList.add('hidden');
+        rolesBtn.setAttribute('aria-expanded', 'false');
+        rolesChevron.style.transform = '';
+      });
+      rolesMegaMenu.addEventListener('click', e => e.stopPropagation());
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') { rolesMegaMenu.classList.add('hidden'); rolesBtn.setAttribute('aria-expanded','false'); rolesChevron.style.transform=''; }
+      });
+    }
+
+    // Highlight active nav link
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('nav a[href]').forEach(link => {
+      if (link.getAttribute('href') === currentPage || (currentPage === '' && link.getAttribute('href') === 'index.html')) {
+        link.style.color = '#2A9D8F';
+        link.style.borderBottomColor = '#2A9D8F';
+      }
+    });
+  </script>
+
+</body>
+</html>
