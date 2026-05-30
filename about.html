@@ -51,9 +51,7 @@
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <a href="index.html" class="flex items-center gap-3 flex-shrink-0">
-          <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#2A9D8F">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-          </div>
+          <img src="assets/images/logo.jpeg" alt="Trivara Logo" class="h-12 w-auto object-contain flex-shrink-0">
           <div class="leading-tight">
             <div class="font-extrabold text-lg tracking-wider" style="color:#1B2F5E">TRIVARA</div>
             <div class="font-semibold text-xs" style="color:#2A9D8F">Staffing Solutions Ltd</div>
@@ -69,37 +67,108 @@
               Roles
               <svg id="roles-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="transition-transform duration-200"><polyline points="6 9 12 15 18 9"/></svg>
             </button>
-            <div id="roles-mega-menu" class="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-[680px] bg-white rounded-2xl shadow-2xl border border-gray-100 p-6 hidden" role="menu">
-              <div class="absolute -top-2 left-1/2 -translate-x-1/2 w-4 h-4 bg-white border-l border-t border-gray-100 rotate-45"></div>
-              <div class="mb-5">
-                <p class="text-xs font-bold uppercase tracking-widest mb-3 pb-2 border-b-2" style="color:#2A9D8F;border-color:#2A9D8F">Healthcare</p>
-                <div class="grid grid-cols-4 gap-2">
-                  <a href="contact.html?role=Nurse" class="role-pill">Nurse</a>
-                  <a href="contact.html?role=HCA" class="role-pill">HCA</a>
-                  <a href="contact.html?role=Physiotherapist" class="role-pill">Physiotherapist</a>
-                  <a href="contact.html?role=Social+Care+Worker" class="role-pill">Social Care Worker</a>
-                  <a href="contact.html?role=Pharmacist" class="role-pill">Pharmacist</a>
-                  <a href="contact.html?role=Occupational+Therapist" class="role-pill">Occupational Therapist</a>
-                  <a href="contact.html?role=Radiologist" class="role-pill">Radiologist</a>
-                  <a href="contact.html?role=Psychologist" class="role-pill">Psychologist</a>
+            <div id="roles-mega-menu" class="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-white rounded-2xl shadow-2xl border border-gray-100 overflow-hidden hidden" role="menu" style="z-index:100">
+              <!-- Top bar -->
+              <div class="px-6 py-3 border-b border-gray-100 flex items-center justify-between" style="background-color:#F5F7FA">
+                <span class="text-xs font-bold uppercase tracking-widest" style="color:#1B2F5E">Browse All Roles</span>
+                <a href="roles.html" class="text-xs font-semibold" style="color:#2A9D8F">View all roles →</a>
+              </div>
+              <div class="p-6">
+                <!-- Healthcare -->
+                <div class="mb-5">
+                  <p class="text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2" style="color:#2A9D8F">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                    Healthcare
+                  </p>
+                  <div class="grid grid-cols-4 gap-1.5">
+                    <a href="contact.html?role=Nurse" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Nurse</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">RGN, Mental Health &amp; Specialist</p></div>
+                    </a>
+                    <a href="contact.html?role=HCA" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">HCA</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Healthcare Assistants, all settings</p></div>
+                    </a>
+                    <a href="contact.html?role=Physiotherapist" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Physiotherapist</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Clinical &amp; community roles</p></div>
+                    </a>
+                    <a href="contact.html?role=Social+Care+Worker" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Social Care Worker</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Residential &amp; community care</p></div>
+                    </a>
+                    <a href="contact.html?role=Pharmacist" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Pharmacist</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Clinical, retail &amp; dispensary</p></div>
+                    </a>
+                    <a href="contact.html?role=Occupational+Therapist" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Occupational Therapist</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Hospital, community &amp; private</p></div>
+                    </a>
+                    <a href="contact.html?role=Radiologist" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Radiologist</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Diagnostic radiographers &amp; specialists</p></div>
+                    </a>
+                    <a href="contact.html?role=Psychologist" class="mega-role-card flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors group">
+                      <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.1)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 1 0 0 16A8 8 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+                      <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Psychologist</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Clinical, educational &amp; counselling</p></div>
+                    </a>
+                  </div>
+                </div>
+                <!-- Hospitality + Other Sectors side by side -->
+                <div class="grid grid-cols-2 gap-6 pt-4 border-t border-gray-100">
+                  <!-- Hospitality -->
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2" style="color:#c9a038">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+                      Hospitality
+                    </p>
+                    <div class="space-y-1">
+                      <a href="contact.html?role=Housekeeping" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(233,196,106,0.15)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Housekeeping</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Attendants &amp; supervisors</p></div>
+                      </a>
+                      <a href="contact.html?role=Chef" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(233,196,106,0.15)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Chef</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">All levels, commis to executive</p></div>
+                      </a>
+                      <a href="contact.html?role=Waiter" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(233,196,106,0.15)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#c9a038" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8h1a4 4 0 1 1 0 8h-1"/><path d="M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8z"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Waiter</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Front of house &amp; service team</p></div>
+                      </a>
+                    </div>
+                  </div>
+                  <!-- Other Sectors -->
+                  <div>
+                    <p class="text-xs font-bold uppercase tracking-widest mb-3 flex items-center gap-2" style="color:#1B2F5E">
+                      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                      Other Sectors
+                    </p>
+                    <div class="space-y-1">
+                      <a href="contact.html?role=Logistics" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(27,47,94,0.08)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Logistics</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Drivers, warehouse &amp; coordinators</p></div>
+                      </a>
+                      <a href="contact.html?role=Construction" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(27,47,94,0.08)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Construction</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Site workers, trades &amp; management</p></div>
+                      </a>
+                      <a href="contact.html?role=Marketing+%26+Media" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(27,47,94,0.08)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Marketing &amp; Media</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Digital, content &amp; media roles</p></div>
+                      </a>
+                      <a href="contact.html?role=Sales+%26+Accountant" class="flex items-center gap-2.5 p-2.5 rounded-xl hover:bg-[#F5F7FA] transition-colors">
+                        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0" style="background-color:rgba(27,47,94,0.08)"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+                        <div><p class="text-xs font-semibold leading-tight" style="color:#1B2F5E">Sales &amp; Accountant</p><p class="text-[10px] leading-tight" style="color:#9CA3AF">Sales, finance &amp; account management</p></div>
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="mb-5">
-                <p class="text-xs font-bold uppercase tracking-widest mb-3 pb-2 border-b-2" style="color:#E9C46A;border-color:#E9C46A">Hospitality</p>
-                <div class="grid grid-cols-4 gap-2">
-                  <a href="contact.html?role=Housekeeping" class="role-pill">Housekeeping</a>
-                  <a href="contact.html?role=Chef" class="role-pill">Chef</a>
-                  <a href="contact.html?role=Waiter" class="role-pill">Waiter</a>
-                </div>
-              </div>
-              <div>
-                <p class="text-xs font-bold uppercase tracking-widest mb-3 pb-2 border-b-2" style="color:#1B2F5E;border-color:#1B2F5E">Other Sectors</p>
-                <div class="grid grid-cols-4 gap-2">
-                  <a href="contact.html?role=Logistics" class="role-pill">Logistics</a>
-                  <a href="contact.html?role=Construction" class="role-pill">Construction</a>
-                  <a href="contact.html?role=Marketing+%26+Media" class="role-pill">Marketing &amp; Media</a>
-                  <a href="contact.html?role=Sales+%26+Accountant" class="role-pill">Sales &amp; Accountant</a>
-                </div>
+              <!-- Bottom CTA bar -->
+              <div class="px-6 py-3 border-t border-gray-100 flex items-center justify-between" style="background-color:#F5F7FA">
+                <a href="enquiry.html" class="text-xs font-semibold" style="color:#4A5568">Looking for a role? <span style="color:#2A9D8F">Send an enquiry →</span></a>
+                <a href="staffrequest.html" class="text-xs font-semibold" style="color:#1B2F5E">Need staff? <span style="color:#2A9D8F">Submit a request →</span></a>
               </div>
             </div>
           </div>
@@ -108,7 +177,7 @@
         <!-- Social + Hamburger -->
         <div class="flex items-center gap-4">
           <div class="hidden lg:flex items-center gap-3">
-            <a href="#" aria-label="Facebook" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.facebook.com/share/1FVgmC6mSC/?mibextid=wwXIfr" aria-label="Facebook" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="https://www.linkedin.com/company/trivara-staffing-solutions-ltd/" aria-label="LinkedIn" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="https://www.instagram.com/trivara_staffingsolutions" aria-label="Instagram" class="hover:opacity-70 transition-opacity" style="color:#1B2F5E"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
           </div>
@@ -137,7 +206,7 @@
         <a href="contact.html" class="text-white/80 hover:text-white py-3 border-b border-white/10 font-medium text-sm">Contact</a>
       </nav>
       <div class="mt-8 flex gap-4">
-        <a href="#" aria-label="Facebook" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="https://www.facebook.com/share/1FVgmC6mSC/?mibextid=wwXIfr" aria-label="Facebook" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
         <a href="https://www.linkedin.com/company/trivara-staffing-solutions-ltd/" aria-label="LinkedIn" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
         <a href="https://www.instagram.com/trivara_staffingsolutions" aria-label="Instagram" class="text-white/60 hover:text-white transition-colors"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
       </div>
@@ -321,15 +390,109 @@
 
   </main>
 
+    <!-- ===================== CONTACT FORM ===================== -->
+    <section id="contact" class="py-20 lg:py-28" style="background-color:#0c1a30">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-5 gap-12 lg:gap-20 items-start">
+
+          <!-- Left: copy + contact info -->
+          <div class="lg:col-span-2 lg:pt-2" data-aos="fade-right">
+            <div class="flex items-center gap-3 mb-8">
+              <div class="h-px w-8 flex-shrink-0" style="background-color:#2A9D8F"></div>
+              <span class="text-xs font-bold uppercase tracking-[0.18em]" style="color:#2A9D8F">Get in Touch</span>
+            </div>
+            <h2 class="font-semibold mb-6 text-white" style="font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.05">
+              Let's Talk.
+            </h2>
+            <p class="leading-relaxed mb-10 max-w-xs text-sm" style="color:rgba(255,255,255,0.55)">Whether you're an employer looking for the right people, or a professional ready for your next step, we're here.</p>
+            <div class="space-y-5">
+              <a href="mailto:Info@trivara.ie" class="flex items-center gap-4 group">
+                <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.35)">Email us</p>
+                  <p class="text-sm font-semibold text-white group-hover:text-[#2A9D8F] transition-colors">Info@trivara.ie</p>
+                </div>
+              </a>
+              <div class="flex items-center gap-4">
+                <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.35)">Call us</p>
+                  <p class="text-sm font-semibold text-white">+353 85 715 8111 / +353 85 715 8100</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: form -->
+          <div class="lg:col-span-3" data-aos="fade-left" data-aos-delay="100">
+            <div class="bg-white rounded-xl p-8 sm:p-10" style="box-shadow:0 25px 50px -12px rgba(0,0,0,0.35)">
+              <h3 class="text-xl font-bold mb-1" style="color:#1B2F5E">Send Us a Message</h3>
+              <p class="text-sm mb-8" style="color:#9CA3AF">We'll get back to you within one business day.</p>
+              <form id="about-contact-form" novalidate>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="ac-name" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Full Name <span class="text-red-400">*</span></label>
+                    <input type="text" id="ac-name" name="name" required placeholder="Your name" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
+                    <p class="ac-err hidden text-xs text-red-500 mt-1">Please enter your name.</p>
+                  </div>
+                  <div>
+                    <label for="ac-email" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Email <span class="text-red-400">*</span></label>
+                    <input type="email" id="ac-email" name="email" required placeholder="you@email.com" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
+                    <p class="ac-err hidden text-xs text-red-500 mt-1">Please enter a valid email.</p>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="ac-phone" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Phone <span class="text-red-400">*</span></label>
+                    <input type="tel" id="ac-phone" name="phone" required placeholder="+353..." class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
+                    <p class="ac-err hidden text-xs text-red-500 mt-1">Please enter your phone number.</p>
+                  </div>
+                  <div>
+                    <label for="ac-type" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Enquiry Type <span class="text-red-400">*</span></label>
+                    <select id="ac-type" name="type" required class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
+                      <option value="" disabled selected>Select type...</option>
+                      <option>Agency Staffing Enquiry</option>
+                      <option>Overseas Recruitment – Nurses &amp; HCAs</option>
+                      <option>Permanent Placement</option>
+                      <option>General Enquiry</option>
+                      <option>I'm Looking for a Job</option>
+                    </select>
+                    <p class="ac-err hidden text-xs text-red-500 mt-1">Please select an enquiry type.</p>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label for="ac-message" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Message</label>
+                  <textarea id="ac-message" name="message" rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all resize-none" style="color:#1B2F5E"></textarea>
+                </div>
+                <button type="submit" class="w-full py-4 rounded-full font-bold text-white text-sm tracking-wide transition-all duration-200 hover:opacity-90 hover:shadow-lg" style="background-color:#1B2F5E">
+                  Send Message →
+                </button>
+              </form>
+              <div id="about-form-success" class="hidden text-center py-10">
+                <div class="w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-4" style="background-color:rgba(42,157,143,0.1)">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h4 class="text-lg font-bold mb-2" style="color:#1B2F5E">Message Sent!</h4>
+                <p class="text-sm" style="color:#9CA3AF">A member of our team will be in touch shortly.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   <!-- ===================== FOOTER ===================== -->
   <footer style="background-color:#1B2F5E">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 pt-14 pb-12 border-b border-white/10">
         <div class="col-span-2 lg:col-span-1">
           <a href="index.html" class="flex items-center gap-3 mb-5">
-            <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#2A9D8F">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
+            <img src="assets/images/logo.jpeg" alt="Trivara Logo" class="h-10 w-auto object-contain flex-shrink-0">
             <div>
               <div class="text-white font-extrabold text-base tracking-wider">TRIVARA</div>
               <div class="text-xs font-semibold" style="color:#2A9D8F">Staffing Solutions Ltd</div>
@@ -337,7 +500,7 @@
           </a>
           <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.42);max-width:210px">Your trusted partner for all your staffing needs, Ireland and globally.</p>
           <div class="flex items-center gap-4">
-            <a href="#" aria-label="Facebook" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.facebook.com/share/1FVgmC6mSC/?mibextid=wwXIfr" aria-label="Facebook" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="https://www.linkedin.com/company/trivara-staffing-solutions-ltd/" aria-label="LinkedIn" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
             <a href="https://www.instagram.com/trivara_staffingsolutions" aria-label="Instagram" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
           </div>
@@ -455,6 +618,32 @@
         link.style.borderBottomColor = '#2A9D8F';
       }
     });
+
+    // About page contact form
+    const aboutForm = document.getElementById('about-contact-form');
+    if (aboutForm) {
+      const acFields = [
+        { id:'ac-name',  check: v => v.trim().length > 0 },
+        { id:'ac-email', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
+        { id:'ac-phone', check: v => v.trim().length > 0 },
+        { id:'ac-type',  check: v => v !== '' }
+      ];
+      acFields.forEach(f => {
+        const el = document.getElementById(f.id);
+        el.addEventListener('input', () => { el.classList.remove('border-red-400'); el.nextElementSibling.classList.add('hidden'); });
+      });
+      aboutForm.addEventListener('submit', e => {
+        e.preventDefault();
+        let valid = true;
+        acFields.forEach(f => {
+          const el = document.getElementById(f.id);
+          const err = el.nextElementSibling;
+          if (!f.check(el.value)) { el.classList.add('border-red-400'); err.classList.remove('hidden'); valid = false; }
+          else { el.classList.remove('border-red-400'); err.classList.add('hidden'); }
+        });
+        if (valid) { aboutForm.classList.add('hidden'); document.getElementById('about-form-success').classList.remove('hidden'); }
+      });
+    }
   </script>
 
 </body>
