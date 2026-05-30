@@ -240,13 +240,15 @@
     <!-- ===================== HERO ===================== -->
     <section class="bg-[#F5F7FA] pt-24 pb-10">
       <div style="max-width:100%;padding-left:1rem;padding-right:1rem">
-        <div class="relative overflow-hidden rounded-3xl" style="min-height:78vh;background:linear-gradient(140deg, #0a1628 0%, #1B2F5E 50%, #163050 100%)">
+        <div class="relative rounded-3xl" style="min-height:78vh">
+          <!-- BG layer clipped, content layer not clipped -->
+          <div class="absolute inset-0 rounded-3xl overflow-hidden" style="background:linear-gradient(140deg, #0a1628 0%, #1B2F5E 50%, #163050 100%)"></div>
 
-          <!-- Inner padding wrapper -->
-          <div class="relative w-full h-full grid lg:grid-cols-2 gap-6 px-8 sm:px-12 lg:px-16 pt-14 pb-10 lg:pt-20">
+          <!-- Inner padding wrapper (overflow visible so image can pop out) -->
+          <div class="relative w-full h-full grid lg:grid-cols-2 gap-6 px-8 sm:px-16 lg:px-20 pt-14 pb-10 lg:pt-20">
 
             <!-- LEFT: text -->
-            <div class="flex flex-col justify-center" data-aos="fade-right">
+            <div class="flex flex-col justify-center pl-0 sm:pl-4 lg:pl-8" data-aos="fade-right">
               <div class="flex items-center gap-3 mb-7">
                 <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F"></span>
                 <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.5"></span>
@@ -272,31 +274,31 @@
             </div>
 
             <!-- RIGHT: carousel — no border, no container, just PNG cutouts -->
-            <div class="relative flex items-end justify-center" data-aos="fade-left" data-aos-delay="120">
-              <div id="hero-carousel" class="relative w-full" style="height:620px">
+            <div class="relative flex items-end justify-center overflow-visible" style="margin-top:-80px" data-aos="fade-left" data-aos-delay="120">
+              <div id="hero-carousel" class="relative w-full" style="height:780px">
 
                 <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                  <img src="assets/images/h1.png" alt="Healthcare professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <img src="assets/images/h1.png" alt="Healthcare professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                   <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Healthcare</p><p class="text-sm font-semibold text-white">Nurses &amp; HCAs</p></div>
                 </div>
 
                 <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                  <img src="assets/images/h2.png" alt="Hospitality professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <img src="assets/images/h2.png" alt="Hospitality professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                   <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Hospitality</p><p class="text-sm font-semibold text-white">Chefs &amp; Front of House</p></div>
                 </div>
 
                 <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                  <img src="assets/images/h3.png" alt="Construction professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <img src="assets/images/h3.png" alt="Construction professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                   <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Construction</p><p class="text-sm font-semibold text-white">Site &amp; Trade Roles</p></div>
                 </div>
 
                 <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                  <img src="assets/images/h4.png" alt="Social care professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <img src="assets/images/h4.png" alt="Social care professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                   <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Social Care</p><p class="text-sm font-semibold text-white">Support Workers</p></div>
                 </div>
 
                 <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                  <img src="assets/images/h5.png" alt="Logistics professional" class="max-h-full w-auto object-contain object-bottom" style="filter:drop-shadow(0 20px 40px rgba(0,0,0,0.4))">
+                  <img src="assets/images/h5.png" alt="Logistics professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                   <div class="absolute bottom-5 left-0"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Logistics &amp; More</p><p class="text-sm font-semibold text-white">Drivers &amp; Warehouse</p></div>
                 </div>
 
