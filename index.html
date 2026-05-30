@@ -1,18 +1,18 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trivara Staffing Solutions Ltd — Your Trusted Partner</title>
+  <title>Trivara Staffing Solutions Ltd, Your Trusted Partner</title>
   <meta name="description" content="Trivara Staffing Solutions Ltd connects businesses with exceptional talent across healthcare, hospitality, construction and more. Ireland-wide and global staffing solutions." />
-  <meta property="og:title" content="Trivara Staffing Solutions Ltd — Your Trusted Partner" />
+  <meta property="og:title" content="Trivara Staffing Solutions Ltd, Your Trusted Partner" />
   <meta property="og:description" content="Your trusted partner for all your staffing needs. Agency staffing, overseas recruitment, and permanent placement across Ireland and beyond." />
   <meta property="og:type" content="website" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
@@ -38,9 +38,31 @@
   </script>
 
   <style>
-    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-    .role-pill { display: block; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 500; text-align: center; color: #4A5568; background-color: #F5F7FA; border: 1px solid #e2e8f0; transition: all 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-    .role-pill:hover { background-color: #2A9D8F; color: white; border-color: #2A9D8F; }
+    body { font-family:'Inter',sans-serif; scroll-behavior:smooth; }
+    h1,h2,h3,h4 { font-family:'Ubuntu',sans-serif; }
+    .role-pill { display:block; padding:0.35rem 0.75rem; border-radius:9999px; font-size:0.75rem; font-weight:500; text-align:center; color:#4A5568; background-color:#F5F7FA; border:1px solid #e2e8f0; transition:all 0.2s; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+    .role-pill:hover { background-color:#2A9D8F; color:white; border-color:#2A9D8F; }
+    /* Carousel */
+    .hero-slide { position:absolute; inset:0; opacity:0; transform:scale(0.95) translateY(12px); transition:opacity 0.7s ease,transform 0.7s ease; pointer-events:none; }
+    .hero-slide.active { opacity:1; transform:scale(1) translateY(0); pointer-events:auto; }
+    .carousel-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.35); border:none; cursor:pointer; transition:all 0.3s; padding:0; }
+    .carousel-dot.active { background:white; width:24px; border-radius:4px; }
+    /* Text link buttons */
+    .btn-link { display:inline-flex; align-items:center; gap:0.55rem; font-weight:600; transition:gap 0.2s; }
+    .btn-link:hover { gap:0.85rem; }
+    .btn-link .arr { transition:transform 0.2s; }
+    .btn-link:hover .arr { transform:translateX(4px); }
+    /* Card hover */
+    .card-hover { transition:transform 0.25s ease,box-shadow 0.25s ease; }
+    .card-hover:hover { transform:translateY(-6px); box-shadow:0 20px 40px -10px rgba(27,47,94,0.16); }
+    /* Process step hover */
+    .proc-step { transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s; }
+    .proc-step:hover { transform:translateY(-4px); box-shadow:0 14px 28px -6px rgba(27,47,94,0.13); }
+    /* FAQ */
+    .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.38s ease,padding 0.2s; }
+    .faq-item.open .faq-answer { max-height:260px; }
+    .faq-item.open .faq-icon { transform:rotate(45deg); color:#2A9D8F; }
+    .faq-icon { transition:transform 0.3s,color 0.2s; }
   </style>
 </head>
 <body class="bg-white text-[#4A5568]">
@@ -147,45 +169,75 @@
   <main>
 
     <!-- ===================== HERO ===================== -->
-    <section class="relative min-h-screen flex items-center overflow-hidden" style="background: linear-gradient(135deg, #0d1b35 0%, #1B2F5E 50%, #163050 100%);">
-      <!-- Background image -->
-      <div class="absolute inset-0">
-        <img src="https://picsum.photos/1600/900?random=10" alt="" class="w-full h-full object-cover opacity-30" style="mix-blend-mode:overlay" />
-      </div>
-      <!-- Gradient overlay for depth -->
-      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(13,27,53,0.85) 0%, rgba(13,27,53,0.3) 100%)"></div>
-
-      <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-24 w-full">
-        <div class="max-w-3xl" data-aos="fade-up">
-          <!-- Badge -->
-          <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8" style="background-color:rgba(42,157,143,0.2); border:1px solid rgba(42,157,143,0.4)">
-            <span class="w-2 h-2 rounded-full flex-shrink-0" style="background-color:#2A9D8F"></span>
-            <span class="text-sm font-semibold" style="color:#2A9D8F">Ireland &amp; Global Staffing Solutions</span>
+    <section class="relative min-h-screen flex items-center overflow-hidden" style="background:linear-gradient(135deg, #0a1628 0%, #1B2F5E 55%, #163050 100%)">
+      <div class="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-16 lg:pt-36 lg:pb-24">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <!-- LEFT -->
+          <div data-aos="fade-right">
+            <div class="flex items-center gap-3 mb-8">
+              <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F"></span>
+              <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.5"></span>
+              <span class="block w-1.5 h-1.5 rounded-full" style="background-color:#2A9D8F;opacity:0.25"></span>
+              <span class="text-xs font-semibold uppercase tracking-[0.2em] ml-1" style="color:#2A9D8F">Ireland &amp; Global Staffing Solutions</span>
+            </div>
+            <h1 class="font-semibold text-white mb-6 leading-tight" style="font-size:clamp(2.4rem,5vw,3.8rem)">
+              Your Trusted Partner<br>for All Your<br>Staffing Needs
+            </h1>
+            <p class="text-base sm:text-lg mb-10 max-w-md leading-relaxed" style="color:rgba(255,255,255,0.6)">
+              Connecting exceptional talent with forward-thinking organisations across healthcare, hospitality, construction, and beyond.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-7">
+              <a href="staffrequest.html" class="btn-link text-white text-base">
+                <span style="border-bottom:1px solid rgba(255,255,255,0.4)">I'm Looking for Staff</span>
+                <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+              <a href="roles.html" class="btn-link text-base" style="color:#2A9D8F">
+                <span style="border-bottom:1px solid rgba(42,157,143,0.45)">I'm Looking for a Job</span>
+                <svg class="arr" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
           </div>
-
-          <!-- H1 -->
-          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-tight mb-6">
-            Your Trusted Partner for All Your Staffing Needs
-          </h1>
-
-          <!-- Sub -->
-          <p class="text-lg sm:text-xl text-white/70 mb-10 max-w-xl leading-relaxed">
-            Connecting exceptional talent with forward-thinking organisations — across healthcare, hospitality, construction, and beyond. Fast, fully vetted, fully compliant.
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="staffrequest.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:scale-105" style="background-color:#1B2F5E; color:white; border:2px solid white;">
-              I'm Looking for Staff &rarr;
-            </a>
-            <a href="roles.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base text-white transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#1B2F5E]" style="background-color:transparent; border:2px solid white;">
-              I'm Looking for a Job &rarr;
-            </a>
+          <!-- RIGHT: carousel -->
+          <div class="relative flex items-center justify-center" data-aos="fade-left" data-aos-delay="150">
+            <div class="absolute inset-0 blur-3xl opacity-20" style="background:radial-gradient(circle at 50% 50%, #2A9D8F, transparent 70%)"></div>
+            <div id="hero-carousel" class="relative w-full max-w-sm mx-auto" style="height:460px">
+              <div class="hero-slide active rounded-2xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/480/540?random=101" alt="Healthcare professional" class="w-full h-full object-cover">
+                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
+                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Healthcare</p><p class="text-sm font-semibold text-white">Nurses &amp; HCAs</p></div>
+              </div>
+              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/480/540?random=102" alt="Hospitality professional" class="w-full h-full object-cover">
+                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
+                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Hospitality</p><p class="text-sm font-semibold text-white">Chefs &amp; Front of House</p></div>
+              </div>
+              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/480/540?random=103" alt="Construction professional" class="w-full h-full object-cover">
+                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
+                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Construction</p><p class="text-sm font-semibold text-white">Site &amp; Trade Roles</p></div>
+              </div>
+              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/480/540?random=104" alt="Social care professional" class="w-full h-full object-cover">
+                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
+                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Social Care</p><p class="text-sm font-semibold text-white">Support Workers</p></div>
+              </div>
+              <div class="hero-slide rounded-2xl overflow-hidden shadow-2xl">
+                <img src="https://picsum.photos/480/540?random=105" alt="Logistics professional" class="w-full h-full object-cover">
+                <div class="absolute inset-0" style="background:linear-gradient(to top,rgba(10,22,40,0.6) 0%,transparent 55%)"></div>
+                <div class="absolute bottom-5 left-5"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Logistics &amp; More</p><p class="text-sm font-semibold text-white">Drivers &amp; Warehouse</p></div>
+              </div>
+              <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-2 items-center">
+                <button class="carousel-dot active" data-idx="0" aria-label="Slide 1"></button>
+                <button class="carousel-dot" data-idx="1" aria-label="Slide 2"></button>
+                <button class="carousel-dot" data-idx="2" aria-label="Slide 3"></button>
+                <button class="carousel-dot" data-idx="3" aria-label="Slide 4"></button>
+                <button class="carousel-dot" data-idx="4" aria-label="Slide 5"></button>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
-
     <!-- ===================== TRUST BAR ===================== -->
     <div style="background-color:#111e38;border-top:1px solid rgba(42,157,143,0.2)">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -225,10 +277,10 @@
               At Trivara Staffing Solutions, we understand that finding the right person for the right role isn't just about matching CVs to job descriptions. It's about understanding organisational culture, sector nuances, compliance requirements, and the very real human element that underpins every successful hire.
             </p>
             <p class="text-[#4A5568] leading-relaxed mb-8">
-              With deep expertise across healthcare, hospitality, logistics, construction, and professional sectors, our team works tirelessly to source, vet, and place professionals who not only meet requirements but genuinely excel — giving organisations the confidence to grow and candidates the opportunity to thrive.
+              With deep expertise across healthcare, hospitality, logistics, construction, and professional sectors, our team works tirelessly to source, vet, and place professionals who not only meet requirements but genuinely excel, giving organisations the confidence to grow and candidates the opportunity to thrive.
             </p>
             <blockquote class="border-l-4 pl-5 mb-8 italic text-[#4A5568]" style="border-color:#E9C46A">
-              "We don't just fill vacancies — we build partnerships that transform organisations and advance careers."
+              "We don't just fill vacancies, we build partnerships that transform organisations and advance careers."
             </blockquote>
             <a href="about.html" class="inline-flex items-center gap-2 font-semibold transition-colors duration-200 hover:underline" style="color:#2A9D8F">
               Learn more about us
@@ -298,7 +350,7 @@
             <div class="p-7 relative">
               <span class="absolute top-2 right-5 font-black text-7xl leading-none select-none pointer-events-none" style="color:rgba(42,157,143,0.07)">02</span>
               <h3 class="text-xl font-bold mb-3" style="color:#1B2F5E">Overseas Recruitment of Nurses &amp; HCAs</h3>
-              <p class="text-[#4A5568] text-sm leading-relaxed mb-5">Trivara Staffing Solutions delivers a refined and strategically managed approach to international healthcare recruitment. We source highly skilled Nurses and Healthcare Assistants from overseas, partnering with private nursing homes and healthcare facilities across Ireland to provide access to exceptional, fully vetted professionals. Our recruitment division oversees every stage of the process — from targeted talent identification and rigorous screening to seamless placement — ensuring a compliant, efficient, and well-supported transition for both clients and candidates.</p>
+              <p class="text-[#4A5568] text-sm leading-relaxed mb-5">Trivara Staffing Solutions delivers a refined and strategically managed approach to international healthcare recruitment. We source highly skilled Nurses and Healthcare Assistants from overseas, partnering with private nursing homes and healthcare facilities across Ireland to provide access to exceptional, fully vetted professionals. Our recruitment division oversees every stage of the process, from targeted talent identification and rigorous screening to seamless placement, ensuring a compliant, efficient, and well-supported transition for both clients and candidates.</p>
               <a href="contact.html?type=Overseas+Recruitment" class="inline-flex items-center gap-1 text-sm font-semibold hover:underline" style="color:#2A9D8F">
                 Learn More &rarr;
               </a>
@@ -329,128 +381,257 @@
     </section>
 
     <!-- ===================== HOW WE WORK ===================== -->
-    <section class="bg-white py-20">
+    <section style="background-color:#F5F7FA" class="py-20 lg:py-28">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-        <!-- Title -->
-        <div class="text-center mb-16" data-aos="fade-up">
+        <div class="mb-14" data-aos="fade-up">
           <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#2A9D8F">Our Process</p>
-          <h2 class="text-4xl font-extrabold" style="color:#1B2F5E">How We Work</h2>
-          <p class="mt-4 text-[#4A5568] max-w-lg mx-auto">A clear, proven process that delivers results — whether you need local cover or international talent.</p>
+          <h2 class="text-4xl font-semibold mb-2" style="color:#1B2F5E">How We Work</h2>
+          <p class="text-sm" style="color:#4A5568">A clear, proven process whether you need local cover or international talent.</p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+        <!-- Agency Placements -->
+        <div class="mb-12" data-aos="fade-up">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-0.5 w-8 rounded" style="background-color:#2A9D8F"></div>
+            <h3 class="text-sm font-bold uppercase tracking-widest" style="color:#2A9D8F">Agency Placements</h3>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(42,157,143,0.12)">01</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Understand Your Needs</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Consultation on requirements, culture and compliance timeline.</p>
+            </div>
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(42,157,143,0.12)">02</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Source &amp; Screen</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Rigorous vetting from our extensive talent network and active database.</p>
+            </div>
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(42,157,143,0.12)">03</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Match &amp; Present</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Curated shortlist matched to your role, culture and specific criteria.</p>
+            </div>
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(42,157,143,0.12)">04</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Placement &amp; Support</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Ongoing follow-up and support for the full duration of engagement.</p>
+            </div>
+          </div>
+        </div>
 
-          <!-- Agency Placements -->
+        <!-- Overseas Recruitment -->
+        <div data-aos="fade-up" data-aos-delay="80">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="h-0.5 w-8 rounded" style="background-color:#E9C46A"></div>
+            <h3 class="text-sm font-bold uppercase tracking-widest" style="color:#c9a038">Overseas Recruitment</h3>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(233,196,106,0.2)">01</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Initial Assessment</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Workforce gap analysis, OET planning and compliance mapping.</p>
+            </div>
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(233,196,106,0.2)">02</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Global Talent Search</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Sourcing qualified candidates from our international network.</p>
+            </div>
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(233,196,106,0.2)">03</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Visa &amp; Compliance</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Full immigration and permit documentation managed end-to-end.</p>
+            </div>
+            <div class="proc-step bg-white rounded-xl p-6 border border-gray-100 cursor-default">
+              <span class="block font-black leading-none mb-5" style="font-size:3.5rem;color:rgba(233,196,106,0.2)">04</span>
+              <h4 class="font-semibold text-sm mb-2" style="color:#1B2F5E">Arrival &amp; Integration</h4>
+              <p class="text-xs leading-relaxed" style="color:#6B7280">Relocation support and workplace integration for every candidate.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="py-20 lg:py-28 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <div class="mb-14" data-aos="fade-up">
+          <p class="text-xs font-bold uppercase tracking-widest mb-3" style="color:#2A9D8F">Got Questions</p>
+          <h2 class="text-4xl font-semibold" style="color:#1B2F5E">Frequently Asked Questions</h2>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-x-16">
+
+          <!-- Column 1 -->
           <div data-aos="fade-right">
-            <h3 class="text-2xl font-bold mb-8 pb-3 border-b-2" style="color:#1B2F5E; border-color:#2A9D8F">Agency Placements</h3>
-            <div class="space-y-0">
 
-              <!-- Step 1 -->
-              <div class="flex gap-5 relative">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">1</div>
-                  <div class="w-0.5 flex-1 mt-1" style="background-color:#2A9D8F; min-height:3rem"></div>
-                </div>
-                <div class="pb-10">
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Understand Your Needs</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">We begin with a thorough consultation to understand your staffing requirements, organisational culture, compliance obligations, and timeline — ensuring we find candidates who truly fit.</p>
-                </div>
-              </div>
-
-              <!-- Step 2 -->
-              <div class="flex gap-5 relative">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">2</div>
-                  <div class="w-0.5 flex-1 mt-1" style="background-color:#2A9D8F; min-height:3rem"></div>
-                </div>
-                <div class="pb-10">
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Source &amp; Screen</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">Our experienced team draws on an extensive talent network and active database to source candidates. Each applicant undergoes rigorous reference checks, skills assessment, and compliance verification.</p>
-                </div>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="flex gap-5 relative">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">3</div>
-                  <div class="w-0.5 flex-1 mt-1" style="background-color:#2A9D8F; min-height:3rem"></div>
-                </div>
-                <div class="pb-10">
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Match &amp; Present</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">We present a shortlist of thoroughly vetted candidates tailored to your role, along with detailed profiles. You make the final decision — we handle coordination and scheduling.</p>
-                </div>
-              </div>
-
-              <!-- Step 4 (no line after) -->
-              <div class="flex gap-5">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg" style="background-color:#2A9D8F">4</div>
-                </div>
-                <div>
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Placement &amp; Support</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">Once placed, we remain your point of contact. We follow up to ensure the placement is working well for both parties and provide ongoing support for the duration of the engagement.</p>
-                </div>
-              </div>
-
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What sectors does Trivara specialise in?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Trivara specialises in Healthcare (nurses, HCAs, allied health), Hospitality (chefs, front of house, housekeeping), Construction, Logistics, Social Care, and professional roles including Marketing and Accountancy.</p></div>
             </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How quickly can you fill an urgent staffing need?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">For agency placements, we can often provide same-day or next-day cover depending on availability and sector. We maintain an active pool of pre-vetted, compliance-ready professionals.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What is the difference between agency staffing and permanent placement?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Agency staffing covers temporary, flexible, or short-notice cover where we employ and supply the worker. Permanent placement is a direct hire service, where we recruit and place a candidate who becomes your full-time employee.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How do you vet and screen candidates?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">All candidates undergo identity verification, professional reference checks, qualification validation, Garda vetting (where applicable), and sector-specific compliance checks aligned with HIQA and other regulatory standards.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">Are your healthcare placements HIQA-compliant?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Yes. Our healthcare placements are aligned with HIQA standards. We ensure all placed healthcare professionals hold current registrations, required training certificates, and are fully vetted before deployment.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What is OET and why is it needed?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">OET (Occupational English Test) is an English proficiency test specifically designed for healthcare professionals. It is required by the Irish Nursing and Midwifery Board (NMBI) for nurses and HCAs registering to work in Ireland from non-English-speaking countries.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How do I submit a staff request?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Use our <a href="staffrequest.html" style="color:#2A9D8F">Staff Request Form</a> to submit your requirements online. Alternatively, email us at <a href="mailto:Info@trivara.ie" style="color:#2A9D8F">Info@trivara.ie</a> or call +353 85 715 8111 and a consultant will assist you directly.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What countries do you source candidates from?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">We source candidates internationally, with active talent pipelines across India, the Philippines, Nigeria, Ghana, and other key healthcare talent markets. We also recruit domestically within Ireland and from EU countries.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">Do you handle visa and immigration paperwork?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Yes. For overseas recruits, we manage the full documentation process including work permit applications, NMBI registration support (for nurses), immigration coordination, and pre-arrival compliance checks.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How long does overseas recruitment typically take?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">The timeline varies depending on the role, country of origin, and visa type. For healthcare roles, the typical end-to-end process including OET, NMBI registration, and work permit takes 6 to 12 months. We provide a detailed timeline at the assessment stage.</p></div>
+            </div>
+
           </div>
 
-          <!-- Overseas Recruitment -->
-          <div data-aos="fade-left">
-            <h3 class="text-2xl font-bold mb-8 pb-3 border-b-2" style="color:#1B2F5E; border-color:#E9C46A">Overseas Recruitment</h3>
-            <div class="space-y-0">
+          <!-- Column 2 -->
+          <div data-aos="fade-left" data-aos-delay="80">
 
-              <!-- Step 1 -->
-              <div class="flex gap-5 relative">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">1</div>
-                  <div class="w-0.5 flex-1 mt-1" style="background-color:#E9C46A; min-height:3rem"></div>
-                </div>
-                <div class="pb-10">
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Initial Assessment</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">We assess your workforce gap, identify the most suitable sourcing regions, and establish a clear plan covering timelines, costs, compliance requirements, and OET (Occupational English Test) preparation guidance for healthcare professionals.</p>
-                </div>
-              </div>
-
-              <!-- Step 2 -->
-              <div class="flex gap-5 relative">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">2</div>
-                  <div class="w-0.5 flex-1 mt-1" style="background-color:#E9C46A; min-height:3rem"></div>
-                </div>
-                <div class="pb-10">
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Global Talent Search</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">Leveraging our international recruitment network, we identify and screen qualified candidates from key talent markets. All candidates are assessed against your exacting standards before shortlisting.</p>
-                </div>
-              </div>
-
-              <!-- Step 3 -->
-              <div class="flex gap-5 relative">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg z-10" style="background-color:#1B2F5E">3</div>
-                  <div class="w-0.5 flex-1 mt-1" style="background-color:#E9C46A; min-height:3rem"></div>
-                </div>
-                <div class="pb-10">
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Visa &amp; Compliance</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">We manage all immigration documentation, work permit applications, and regulatory compliance requirements — reducing administrative burden and ensuring a smooth, lawful transition for every candidate.</p>
-                </div>
-              </div>
-
-              <!-- Step 4 (no line after) -->
-              <div class="flex gap-5">
-                <div class="flex flex-col items-center flex-shrink-0">
-                  <div class="w-12 h-12 rounded-full flex items-center justify-center font-extrabold text-white text-lg" style="background-color:#E9C46A">4</div>
-                </div>
-                <div>
-                  <h4 class="font-bold text-base mb-1" style="color:#1B2F5E">Arrival &amp; Integration</h4>
-                  <p class="text-[#4A5568] text-sm leading-relaxed">We support candidates through relocation, induction, and early integration — ensuring they settle into their new roles and environments effectively. We remain a resource for both employer and employee throughout.</p>
-                </div>
-              </div>
-
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How do I register my interest in a role?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Visit our <a href="roles.html" style="color:#2A9D8F">Roles page</a>, click on the role that interests you, and complete the enquiry form. Alternatively, use the <a href="enquiry.html" style="color:#2A9D8F">Role Enquiry form</a> to tell us what you are looking for.</p></div>
             </div>
-          </div>
 
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What documentation do candidates need to provide?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Typically: a current CV, proof of qualifications and professional registration, photo ID, two professional references, and any sector-specific certificates (e.g., Manual Handling, NMBI pin for nurses). We guide each candidate through the full requirements.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What support do you provide after placement?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">We remain your dedicated point of contact after every placement. We check in with both employer and candidate, address any issues that arise, and ensure the placement is performing well for all parties.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">Can I trial a candidate before committing permanently?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Yes. We offer temp-to-perm arrangements where a candidate can begin on an agency basis with a view to transitioning to a permanent hire. This gives both parties time to assess fit before commitment.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What roles do you cover in the hospitality sector?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">We cover a wide range of hospitality roles including Chefs (all levels), Kitchen Assistants, Waiters, Front of House staff, Bar staff, and Housekeeping. We serve hotels, restaurants, contract catering, and event catering clients.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">Is there a minimum shift or contract length?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">For agency staffing there is no strict minimum, though single-shift bookings are subject to availability. For sustained cover we recommend block bookings. Specific terms are discussed at the enquiry stage.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">Are your staff fully insured?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Yes. All Trivara agency workers are covered under our employer&#x27;s liability and public liability insurance. Confirmation of our insurance details is available on request.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How are your fees structured?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Our fee structure varies by service type: agency placements are charged at an agreed hourly rate, permanent placements are charged as a percentage of the candidate&#x27;s first-year salary, and overseas recruitment fees are discussed at the assessment stage. Contact us for a tailored quote.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What happens if a placement does not work out?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">For permanent placements we offer a rebate or replacement period. For agency placements we work quickly to provide a suitable replacement. We take quality seriously and aim to resolve any issues promptly.</p></div>
+            </div>
+
+            <div class="faq-item border-b border-gray-100">
+              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
+                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How do I contact Trivara for an urgent staffing need?</span>
+                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Call us directly on <a href="tel:+353857158111" style="color:#2A9D8F">+353 85 715 8111</a> or <a href="tel:+353857158100" style="color:#2A9D8F">+353 85 715 8100</a>. For non-urgent enquiries email <a href="mailto:Info@trivara.ie" style="color:#2A9D8F">Info@trivara.ie</a> or use the contact form below.</p></div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -469,7 +650,7 @@
             <h2 class="font-black mb-6 text-white" style="font-size:clamp(3.2rem,6vw,5.5rem);line-height:0.92">
               Let's<br><span style="color:#2A9D8F">Talk.</span>
             </h2>
-            <p class="leading-relaxed mb-10 max-w-xs text-sm" style="color:rgba(255,255,255,0.55)">Whether you're an employer looking for the right people, or a professional ready for your next step — we're here.</p>
+            <p class="leading-relaxed mb-10 max-w-xs text-sm" style="color:rgba(255,255,255,0.55)">Whether you're an employer looking for the right people, or a professional ready for your next step, we're here.</p>
             <div class="space-y-5">
               <a href="mailto:Info@trivara.ie" class="flex items-center gap-4 group">
                 <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
@@ -562,21 +743,6 @@
       </div>
     </section>
 
-    <!-- ===================== CTA BANNER ===================== -->
-    <section class="py-16" style="background: linear-gradient(135deg, #0d1b35 0%, #1B2F5E 60%, #163050 100%)">
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="fade-up">
-        <h2 class="text-4xl font-extrabold text-white mb-4">Ready to Find the Right People?</h2>
-        <p class="text-white/70 text-lg mb-10 max-w-xl mx-auto">Whether you need one specialist or a team of fifty, Trivara is ready to deliver. Let's talk about your staffing needs.</p>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="staffrequest.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base transition-all duration-300 hover:scale-105 hover:opacity-90" style="background-color:white; color:#1B2F5E;">
-            Request Staff Now
-          </a>
-          <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-base text-white transition-all duration-300 hover:scale-105 hover:bg-white hover:text-[#1B2F5E]" style="border:2px solid white; background-color:transparent;">
-            Get in Touch
-          </a>
-        </div>
-      </div>
-    </section>
 
   </main>
 
@@ -597,7 +763,7 @@
               <div class="text-xs font-semibold" style="color:#2A9D8F">Staffing Solutions Ltd</div>
             </div>
           </a>
-          <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.42);max-width:210px">Your trusted partner for all your staffing needs — Ireland and globally.</p>
+          <p class="text-sm leading-relaxed mb-6" style="color:rgba(255,255,255,0.42);max-width:210px">Your trusted partner for all your staffing needs, Ireland and globally.</p>
           <div class="flex items-center gap-4">
             <a href="#" aria-label="Facebook" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="#" aria-label="LinkedIn" class="transition-colors hover:text-white" style="color:rgba(255,255,255,0.45)"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
@@ -691,6 +857,37 @@
       setTimeout(() => { mobileMenu.style.display = 'none'; }, 300);
     }
     hamburgerBtn.addEventListener('click', openMobileMenu);
+
+
+    // Carousel
+    (function(){
+      const slides = document.querySelectorAll('.hero-slide');
+      const dots   = document.querySelectorAll('.carousel-dot');
+      if(!slides.length) return;
+      let cur = 0, timer;
+      function goTo(n){
+        slides[cur].classList.remove('active');
+        dots[cur].classList.remove('active');
+        cur = (n + slides.length) % slides.length;
+        slides[cur].classList.add('active');
+        dots[cur].classList.add('active');
+      }
+      function next(){ goTo(cur+1); }
+      function start(){ timer = setInterval(next, 3800); }
+      function stop(){ clearInterval(timer); }
+      dots.forEach(d => d.addEventListener('click', function(){ stop(); goTo(+this.dataset.idx); start(); }));
+      start();
+    })();
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', function(){
+        const item = this.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+        if(!isOpen) item.classList.add('open');
+      });
+    });
 
     // Home page contact form
     const homeForm = document.getElementById('home-contact-form');
