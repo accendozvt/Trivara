@@ -52,12 +52,12 @@
     .carousel-dot.active { background:white; width:24px; border-radius:4px; }
     /* Hero card — fixed height on desktop, image overflows top (over header) */
     .hero-card { min-height:640px; }
-    .hero-car-wrap { position:relative; z-index:60; height:640px; margin:-110px auto 0; max-width:640px; pointer-events:none; }
+    .hero-car-wrap { position:relative; z-index:60; height:480px; margin:-70px auto 0; max-width:560px; pointer-events:none; }
     .hero-car-wrap img, .hero-car-wrap .hero-slide { pointer-events:none; }
     .hero-car-wrap .carousel-dot { pointer-events:auto; }
     @media (min-width:1024px){
       .hero-card { height:clamp(600px,68vh,700px); min-height:0; }
-      .hero-car-wrap { position:absolute; left:0; right:0; bottom:0; height:124%; max-width:none; margin:0; z-index:60; }
+      .hero-car-wrap { position:absolute; left:0; right:0; top:-72px; bottom:auto; height:clamp(460px,56vh,580px); max-width:none; margin:0; z-index:60; }
     }
     /* Text link buttons */
     .btn-link { display:inline-flex; align-items:center; gap:0.55rem; font-weight:600; transition:gap 0.2s; }
