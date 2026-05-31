@@ -50,12 +50,14 @@
     .hero-slide.active { opacity:1; transform:scale(1) translateY(0); pointer-events:auto; }
     .carousel-dot { width:8px; height:8px; border-radius:50%; background:rgba(255,255,255,0.35); border:none; cursor:pointer; transition:all 0.3s; padding:0; }
     .carousel-dot.active { background:white; width:24px; border-radius:4px; }
-    /* Hero card — fixed height on desktop, image overflows top */
-    .hero-card { min-height:680px; }
-    .hero-car-wrap { position:relative; height:580px; margin:-80px auto 0; max-width:600px; }
+    /* Hero card — fixed height on desktop, image overflows top (over header) */
+    .hero-card { min-height:640px; }
+    .hero-car-wrap { position:relative; z-index:60; height:640px; margin:-110px auto 0; max-width:640px; pointer-events:none; }
+    .hero-car-wrap img, .hero-car-wrap .hero-slide { pointer-events:none; }
+    .hero-car-wrap .carousel-dot { pointer-events:auto; }
     @media (min-width:1024px){
-      .hero-card { height:clamp(640px,72vh,740px); min-height:0; }
-      .hero-car-wrap { position:absolute; left:0; right:0; bottom:0; height:108%; max-width:none; margin:0; }
+      .hero-card { height:clamp(600px,68vh,700px); min-height:0; }
+      .hero-car-wrap { position:absolute; left:0; right:0; bottom:0; height:124%; max-width:none; margin:0; z-index:60; }
     }
     /* Text link buttons */
     .btn-link { display:inline-flex; align-items:center; gap:0.55rem; font-weight:600; transition:gap 0.2s; }
@@ -248,7 +250,7 @@
   <main>
 
     <!-- ===================== HERO ===================== -->
-    <section class="bg-[#F5F7FA] pt-28 lg:pt-44 pb-10">
+    <section id="hero-section" class="bg-[#F5F7FA] pt-24 pb-10">
       <div style="max-width:100%;padding-left:1rem;padding-right:1rem">
         <div class="hero-card relative rounded-3xl">
           <!-- BG layer (clipped) — gradient mixes logo colours: teal, cobalt, gold-green -->
@@ -983,9 +985,21 @@
 
     // Sticky header shadow on scroll
     const siteHeader = document.getElementById('site-header');
+    const heroCarWrap = document.querySelector('.hero-car-wrap');
+    const rolesMegaMenuEl = document.getElementById('roles-mega-menu');
+    // The hero figure (only) overlaps the header at the very top; the header (and its dropdown)
+    // win once the page is scrolled or the Roles menu is open.
+    function updateHeroLayering() {
+      if (!heroCarWrap) return;
+      const atTop = window.scrollY < 40;
+      const menuOpen = rolesMegaMenuEl && !rolesMegaMenuEl.classList.contains('hidden');
+      heroCarWrap.style.zIndex = (atTop && !menuOpen) ? '60' : '10';
+    }
     window.addEventListener('scroll', () => {
       siteHeader.classList.toggle('shadow-lg', window.scrollY > 20);
+      updateHeroLayering();
     });
+    updateHeroLayering();
 
     // Mobile menu
     const hamburgerBtn = document.getElementById('hamburger-btn');
@@ -1082,15 +1096,17 @@
         rolesMegaMenu.classList.toggle('hidden', isOpen);
         rolesBtn.setAttribute('aria-expanded', String(!isOpen));
         rolesChevron.style.transform = isOpen ? '' : 'rotate(180deg)';
+        updateHeroLayering();
       });
       document.addEventListener('click', () => {
         rolesMegaMenu.classList.add('hidden');
         rolesBtn.setAttribute('aria-expanded', 'false');
         rolesChevron.style.transform = '';
+        updateHeroLayering();
       });
       rolesMegaMenu.addEventListener('click', e => e.stopPropagation());
       document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') { rolesMegaMenu.classList.add('hidden'); rolesBtn.setAttribute('aria-expanded','false'); rolesChevron.style.transform=''; }
+        if (e.key === 'Escape') { rolesMegaMenu.classList.add('hidden'); rolesBtn.setAttribute('aria-expanded','false'); rolesChevron.style.transform=''; updateHeroLayering(); }
       });
     }
 
