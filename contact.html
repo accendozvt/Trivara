@@ -181,8 +181,8 @@
         <!-- LEFT: Form (3/5) -->
         <div class="lg:col-span-3" data-aos="fade-right">
           <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 sm:p-10">
-            <h2 class="text-xl font-bold mb-1" style="color:#1B2F5E">Send Us a Message</h2>
-            <p class="text-sm mb-7" style="color:#9CA3AF">We'll get back to you within one business day.</p>
+            <h2 class="text-xl font-bold mb-1" style="color:#1B2F5E">Role Enquiry</h2>
+            <p class="text-sm mb-7" style="color:#9CA3AF">Tell us about yourself and the role you're interested in. We'll be in touch.</p>
             <div id="form-area">
               <form id="contact-form" novalidate>
                 <div class="grid sm:grid-cols-2 gap-4 mb-4">
@@ -204,21 +204,58 @@
                     <p class="text-red-500 text-xs mt-1 hidden" id="phone-error">Please enter your phone number.</p>
                   </div>
                   <div>
-                    <label for="stampType" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Enquiry Type <span class="text-red-400">*</span></label>
-                    <select id="stampType" name="stampType" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
-                      <option value="" disabled selected>Select type...</option>
-                      <option value="Agency Staffing Enquiry">Agency Staffing Enquiry</option>
-                      <option value="Overseas Recruitment">Overseas Recruitment - Nurses &amp; HCAs</option>
-                      <option value="Permanent Placement">Permanent Placement</option>
-                      <option value="General Enquiry">General Enquiry</option>
-                      <option value="Looking for a Job">I'm Looking for a Job</option>
+                    <label for="roleInterest" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Role Interested In <span class="text-red-400">*</span></label>
+                    <select id="roleInterest" name="roleInterest" required class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
+                      <option value="" disabled selected>Select a role...</option>
+                      <optgroup label="Healthcare">
+                        <option value="Nurse">Nurse</option>
+                        <option value="HCA">HCA</option>
+                        <option value="Physiotherapist">Physiotherapist</option>
+                        <option value="Social Care Worker">Social Care Worker</option>
+                        <option value="Pharmacist">Pharmacist</option>
+                        <option value="Occupational Therapist">Occupational Therapist</option>
+                        <option value="Radiologist">Radiologist</option>
+                        <option value="Psychologist">Psychologist</option>
+                      </optgroup>
+                      <optgroup label="Hospitality">
+                        <option value="Housekeeping">Housekeeping</option>
+                        <option value="Chef">Chef</option>
+                        <option value="Waiter">Waiter</option>
+                      </optgroup>
+                      <optgroup label="Other Sectors">
+                        <option value="Logistics">Logistics</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Marketing &amp; Media">Marketing &amp; Media</option>
+                        <option value="Sales &amp; Accountant">Sales &amp; Accountant</option>
+                      </optgroup>
                     </select>
-                    <p class="text-red-500 text-xs mt-1 hidden" id="stampType-error">Please select an enquiry type.</p>
+                    <p class="text-red-500 text-xs mt-1 hidden" id="roleInterest-error">Please select a role.</p>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="stampType" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Stamp Type <span class="text-gray-400 font-normal text-[9px]">(if applicable)</span></label>
+                    <select id="stampType" name="stampType" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
+                      <option value="">Select stamp type...</option>
+                      <option value="Stamp 1">Stamp 1 - Work Permit</option>
+                      <option value="Stamp 1G">Stamp 1G - Graduate</option>
+                      <option value="Stamp 2">Stamp 2 - Student</option>
+                      <option value="Stamp 3">Stamp 3 - Dependant</option>
+                      <option value="Stamp 4">Stamp 4 - Unrestricted</option>
+                      <option value="Stamp 4 EUFAM">Stamp 4 EUFAM</option>
+                      <option value="Stamp 5">Stamp 5 - Long-term Resident</option>
+                      <option value="EU/EEA Citizen">EU/EEA Citizen</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="nationality" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" placeholder="e.g. Indian, Filipino, Irish" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
                   </div>
                 </div>
                 <div class="mb-6">
                   <label for="message" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Message</label>
-                  <textarea id="message" name="message" rows="5" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all resize-none" style="color:#1B2F5E"></textarea>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell us about yourself, your experience, and what you're looking for..." class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all resize-none" style="color:#1B2F5E"></textarea>
                 </div>
                 <button type="submit" class="w-full py-4 rounded-full font-bold text-white text-sm tracking-wide transition-all duration-200 hover:opacity-90 hover:shadow-lg" style="background:radial-gradient(circle at 84% 12%, rgba(42,157,143,0.40) 0%, transparent 42%), radial-gradient(circle at 8% 88%, rgba(37,99,180,0.32) 0%, transparent 48%), radial-gradient(circle at 62% 106%, rgba(96,176,108,0.18) 0%, transparent 46%), radial-gradient(circle at 97% 58%, rgba(233,196,106,0.10) 0%, transparent 38%), linear-gradient(135deg, #091324 0%, #122a52 55%, #0d2140 100%)">
                   Send Message &rarr;
@@ -258,6 +295,12 @@
                   <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 </div>
                 <div><p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.4)">Phone 2</p><p class="text-sm font-medium text-white group-hover:text-[#2A9D8F] transition-colors">+353 85 715 8100</p></div>
+              </a>
+              <a href="https://wa.me/353857158111" target="_blank" class="flex items-center gap-4 group">
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color:rgba(37,211,102,0.2)">
+                  <svg width="17" height="17" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div><p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.4)">WhatsApp</p><p class="text-sm font-medium text-white group-hover:text-[#25D366] transition-colors">+353 85 715 8111</p></div>
               </a>
               <div class="flex items-center gap-4">
                 <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.2)">
@@ -350,7 +393,7 @@
                 Info@trivara.ie
               </a>
             </li>
-            <li class="flex items-start gap-3 text-sm" style="color:rgba(255,255,255,0.48)">
+            <li class="flex items-start gap-3 text-sm whitespace-nowrap" style="color:rgba(255,255,255,0.48)">
               <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               +353 85 715 8111 / +353 85 715 8100
             </li>
@@ -398,38 +441,13 @@
     document.addEventListener('DOMContentLoaded', () => {
       const params = new URLSearchParams(window.location.search);
       const role = params.get('role');
-      const type = params.get('type');
-      const stampTypeSelect = document.getElementById('stampType');
-      const messageArea = document.getElementById('message');
+      const roleSelect = document.getElementById('roleInterest');
 
-      if (role) {
+      if (role && roleSelect) {
         const decodedRole = decodeURIComponent(role);
-        // Set enquiry type to "I'm Looking for a Job"
-        for (let i = 0; i < stampTypeSelect.options.length; i++) {
-          if (stampTypeSelect.options[i].value === "I'm Looking for a Job") {
-            stampTypeSelect.selectedIndex = i;
-            break;
-          }
-        }
-        // Pre-populate message
-        if (messageArea) {
-          messageArea.value = `I am interested in the ${decodedRole} role.`;
-        }
-      }
-
-      if (type && !role) {
-        // Map ?type= param to matching select option
-        const typeMap = {
-          'agency': 'Agency Staffing Enquiry',
-          'overseas': 'Overseas Recruitment – Nurses & HCAs',
-          'permanent': 'Permanent Placement',
-          'general': 'General Enquiry',
-          'job': "I'm Looking for a Job"
-        };
-        const mappedValue = typeMap[type.toLowerCase()] || type;
-        for (let i = 0; i < stampTypeSelect.options.length; i++) {
-          if (stampTypeSelect.options[i].value === mappedValue) {
-            stampTypeSelect.selectedIndex = i;
+        for (let i = 0; i < roleSelect.options.length; i++) {
+          if (roleSelect.options[i].value === decodedRole) {
+            roleSelect.selectedIndex = i;
             break;
           }
         }
@@ -444,24 +462,25 @@
       const error = document.getElementById(errorId);
       if (show) {
         field.classList.add('border-red-400');
-        field.classList.remove('border-gray-300');
+        field.classList.remove('border-gray-200');
         error.classList.remove('hidden');
       } else {
         field.classList.remove('border-red-400');
-        field.classList.add('border-gray-300');
+        field.classList.add('border-gray-200');
         error.classList.add('hidden');
       }
     }
 
     function clearErrorOnInput(fieldId, errorId) {
       const field = document.getElementById(fieldId);
+      if (!field) return;
       field.addEventListener('input', () => setError(fieldId, errorId, false));
       field.addEventListener('change', () => setError(fieldId, errorId, false));
     }
     clearErrorOnInput('fullName', 'fullName-error');
     clearErrorOnInput('email', 'email-error');
     clearErrorOnInput('phone', 'phone-error');
-    clearErrorOnInput('stampType', 'stampType-error');
+    clearErrorOnInput('roleInterest', 'roleInterest-error');
 
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -470,12 +489,12 @@
       const fullName = document.getElementById('fullName').value.trim();
       const email = document.getElementById('email').value.trim();
       const phone = document.getElementById('phone').value.trim();
-      const stampType = document.getElementById('stampType').value;
+      const roleInterest = document.getElementById('roleInterest').value;
 
       if (!fullName) { setError('fullName', 'fullName-error', true); valid = false; } else { setError('fullName', 'fullName-error', false); }
       if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { setError('email', 'email-error', true); valid = false; } else { setError('email', 'email-error', false); }
       if (!phone) { setError('phone', 'phone-error', true); valid = false; } else { setError('phone', 'phone-error', false); }
-      if (!stampType) { setError('stampType', 'stampType-error', true); valid = false; } else { setError('stampType', 'stampType-error', false); }
+      if (!roleInterest) { setError('roleInterest', 'roleInterest-error', true); valid = false; } else { setError('roleInterest', 'roleInterest-error', false); }
 
       if (!valid) return;
 

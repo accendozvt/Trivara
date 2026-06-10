@@ -17,11 +17,11 @@
   <!-- Preload first hero image to avoid first-slide delay -->
   <link rel="preload" as="image" href="assets/images/h1.webp" fetchpriority="high" />
 
-  <!-- AOS -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-
-  <!-- Tailwind -->
+  <!-- Tailwind (must load before render for utility classes) -->
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (non-render-critical, load async) -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" media="print" onload="this.media='all'" />
   <script>
     tailwind.config = {
       theme: {
@@ -290,28 +290,28 @@
               <div class="hero-car-wrap" data-aos="fade-left" data-aos-delay="120">
                 <div id="hero-carousel" class="relative w-full h-full">
 
-                  <div class="hero-slide absolute inset-0 flex items-end justify-center">
+                  <div class="hero-slide active absolute inset-0 flex items-end justify-center">
                     <img src="assets/images/h1.webp" alt="Healthcare professional" loading="eager" fetchpriority="high" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                     <div class="absolute bottom-6 left-2"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Healthcare</p><p class="text-sm font-semibold text-white">Nurses &amp; HCAs</p></div>
                   </div>
 
                   <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                    <img src="assets/images/h2.webp" alt="Logistics professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
+                    <img src="assets/images/h2.webp" alt="Logistics professional" loading="lazy" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                     <div class="absolute bottom-6 left-2"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Logistics &amp; More</p><p class="text-sm font-semibold text-white">Drivers &amp; Warehouse</p></div>
                   </div>
 
                   <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                    <img src="assets/images/h3.webp" alt="Hospitality professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
+                    <img src="assets/images/h3.webp" alt="Hospitality professional" loading="lazy" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                     <div class="absolute bottom-6 left-2"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#E9C46A">Hospitality</p><p class="text-sm font-semibold text-white">Chefs &amp; Front of House</p></div>
                   </div>
 
                   <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                    <img src="assets/images/h4.webp" alt="Construction professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
+                    <img src="assets/images/h4.webp" alt="Construction professional" loading="lazy" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                     <div class="absolute bottom-6 left-2"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Construction</p><p class="text-sm font-semibold text-white">Site &amp; Trade Roles</p></div>
                   </div>
 
                   <div class="hero-slide absolute inset-0 flex items-end justify-center">
-                    <img src="assets/images/h5.webp" alt="Social care professional" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
+                    <img src="assets/images/h5.webp" alt="Social care professional" loading="lazy" class="w-full h-full object-contain object-bottom" style="filter:drop-shadow(0 24px 48px rgba(0,0,0,0.45))">
                     <div class="absolute bottom-6 left-2"><p class="text-xs font-bold uppercase tracking-widest mb-0.5" style="color:#2A9D8F">Social Care</p><p class="text-sm font-semibold text-white">Support Workers</p></div>
                   </div>
 
@@ -384,7 +384,7 @@
 
           <!-- Right -->
           <div class="relative" data-aos="fade-left">
-            <img src="https://picsum.photos/600/500?random=20" alt="Professionals working together" class="w-full rounded-2xl shadow-2xl object-cover" />
+            <img src="assets/images/about.png" alt="Professional team collaborating in office" class="w-full rounded-2xl shadow-2xl object-cover" />
             <!-- Badge overlay -->
             <div class="absolute -bottom-6 -left-6 rounded-2xl shadow-xl px-6 py-4 flex items-center gap-3" style="background-color:#2A9D8F">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -417,7 +417,7 @@
           <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="0">
             <div class="relative h-48 overflow-hidden">
               <div class="absolute inset-0" style="background: linear-gradient(135deg, #0d1b35 0%, #1B2F5E 100%)"></div>
-              <img src="https://picsum.photos/600/300?random=31" alt="Agency Staffing" class="w-full h-full object-cover opacity-40" style="mix-blend-mode:overlay" />
+              <img src="assets/images/01.jpg" alt="Agency Staffing" class="w-full h-full object-cover opacity-40" style="mix-blend-mode:overlay" />
               <div class="absolute inset-0 flex items-center justify-center">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-90"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
@@ -436,7 +436,7 @@
           <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
             <div class="relative h-48 overflow-hidden">
               <div class="absolute inset-0" style="background: linear-gradient(135deg, #163050 0%, #2A9D8F 100%)"></div>
-              <img src="https://picsum.photos/600/300?random=32" alt="Overseas Recruitment" class="w-full h-full object-cover opacity-40" style="mix-blend-mode:overlay" />
+              <img src="assets/images/02.jpg" alt="Overseas Recruitment" class="w-full h-full object-cover opacity-40" style="mix-blend-mode:overlay" />
               <div class="absolute inset-0 flex items-center justify-center">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-90"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </div>
@@ -455,7 +455,7 @@
           <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
             <div class="relative h-48 overflow-hidden">
               <div class="absolute inset-0" style="background: linear-gradient(135deg, #1B2F5E 0%, #E9C46A 100%)"></div>
-              <img src="https://picsum.photos/600/300?random=33" alt="Permanent Placement" class="w-full h-full object-cover opacity-30" style="mix-blend-mode:overlay" />
+              <img src="assets/images/03.jpg" alt="Permanent Placement" class="w-full h-full object-cover opacity-30" style="mix-blend-mode:overlay" />
               <div class="absolute inset-0 flex items-center justify-center">
                 <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="opacity-90"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
               </div>
@@ -559,7 +559,7 @@
                 <span class="font-black leading-none" style="font-size:2.2rem;color:rgba(233,196,106,0.2)">01</span>
               </div>
               <h4 class="font-semibold text-base mb-2" style="color:white">Initial Assessment</h4>
-              <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.6)">Workforce gap analysis, OET planning and compliance mapping.</p>
+              <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.6)">Workforce gap analysis, Skill &amp; qualification matching and Compliance mapping.</p>
             </div>
 
             <!-- 02 Global Talent Search -->
@@ -761,14 +761,6 @@
 
             <div class="faq-item border-b border-gray-100">
               <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
-                <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">How are your fees structured?</span>
-                <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </button>
-              <div class="faq-answer"><p class="text-sm leading-relaxed pb-5" style="color:#6B7280">Our fee structure varies by service type: agency placements are charged at an agreed hourly rate, permanent placements are charged as a percentage of the candidate&#x27;s first-year salary, and overseas recruitment fees are discussed at the assessment stage. Contact us for a tailored quote.</p></div>
-            </div>
-
-            <div class="faq-item border-b border-gray-100">
-              <button class="w-full flex items-center justify-between py-5 text-left faq-toggle">
                 <span class="font-semibold text-sm pr-4" style="color:#1B2F5E">What happens if a placement does not work out?</span>
                 <svg class="faq-icon flex-shrink-0" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1B2F5E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
               </button>
@@ -822,6 +814,15 @@
                   <p class="text-sm font-semibold text-white">+353 85 715 8111 / +353 85 715 8100</p>
                 </div>
               </div>
+              <a href="https://wa.me/353857158111" target="_blank" class="flex items-center gap-4 hover:opacity-80 transition-opacity">
+                <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(37,211,102,0.15);border:1px solid rgba(37,211,102,0.35)">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs mb-0.5" style="color:rgba(255,255,255,0.35)">WhatsApp</p>
+                  <p class="text-sm font-semibold text-white">+353 85 715 8111</p>
+                </div>
+              </a>
               <div class="flex items-center gap-4">
                 <div class="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:rgba(42,157,143,0.15);border:1px solid rgba(42,157,143,0.35)">
                   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -860,21 +861,58 @@
                     <p class="hc-err hidden text-xs text-red-500 mt-1">Please enter your phone number.</p>
                   </div>
                   <div>
-                    <label for="hc-type" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Enquiry Type <span class="text-red-400">*</span></label>
-                    <select id="hc-type" name="type" required class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
-                      <option value="" disabled selected>Select type...</option>
-                      <option>Agency Staffing Enquiry</option>
-                      <option>Overseas Recruitment – Nurses &amp; HCAs</option>
-                      <option>Permanent Placement</option>
-                      <option>General Enquiry</option>
-                      <option>I'm Looking for a Job</option>
+                    <label for="hc-role" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Role Interested In <span class="text-red-400">*</span></label>
+                    <select id="hc-role" name="role" required class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
+                      <option value="" disabled selected>Select a role...</option>
+                      <optgroup label="Healthcare">
+                        <option value="Nurse">Nurse</option>
+                        <option value="HCA">HCA</option>
+                        <option value="Physiotherapist">Physiotherapist</option>
+                        <option value="Social Care Worker">Social Care Worker</option>
+                        <option value="Pharmacist">Pharmacist</option>
+                        <option value="Occupational Therapist">Occupational Therapist</option>
+                        <option value="Radiologist">Radiologist</option>
+                        <option value="Psychologist">Psychologist</option>
+                      </optgroup>
+                      <optgroup label="Hospitality">
+                        <option value="Housekeeping">Housekeeping</option>
+                        <option value="Chef">Chef</option>
+                        <option value="Waiter">Waiter</option>
+                      </optgroup>
+                      <optgroup label="Other Sectors">
+                        <option value="Logistics">Logistics</option>
+                        <option value="Construction">Construction</option>
+                        <option value="Marketing &amp; Media">Marketing &amp; Media</option>
+                        <option value="Sales &amp; Accountant">Sales &amp; Accountant</option>
+                      </optgroup>
                     </select>
-                    <p class="hc-err hidden text-xs text-red-500 mt-1">Please select an enquiry type.</p>
+                    <p class="hc-err hidden text-xs text-red-500 mt-1">Please select a role.</p>
+                  </div>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="hc-stamp" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Stamp Type <span class="text-gray-400 font-normal text-[9px]">(if applicable)</span></label>
+                    <select id="hc-stamp" name="stamp_type" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all bg-white" style="color:#4A5568">
+                      <option value="">Select stamp type...</option>
+                      <option value="Stamp 1">Stamp 1 - Work Permit</option>
+                      <option value="Stamp 1G">Stamp 1G - Graduate</option>
+                      <option value="Stamp 2">Stamp 2 - Student</option>
+                      <option value="Stamp 3">Stamp 3 - Dependant</option>
+                      <option value="Stamp 4">Stamp 4 - Unrestricted</option>
+                      <option value="Stamp 4 EUFAM">Stamp 4 EUFAM</option>
+                      <option value="Stamp 5">Stamp 5 - Long-term Resident</option>
+                      <option value="EU/EEA Citizen">EU/EEA Citizen</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="hc-nationality" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Nationality</label>
+                    <input type="text" id="hc-nationality" name="nationality" placeholder="e.g. Indian, Filipino, Irish" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all" style="color:#1B2F5E">
                   </div>
                 </div>
                 <div class="mb-6">
                   <label for="hc-message" class="block text-xs font-bold mb-1.5 uppercase tracking-wide" style="color:#6B7280">Message</label>
-                  <textarea id="hc-message" name="message" rows="4" placeholder="How can we help you?" class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all resize-none" style="color:#1B2F5E"></textarea>
+                  <textarea id="hc-message" name="message" rows="4" placeholder="Tell us about yourself, your experience, and what you're looking for..." class="w-full px-4 py-3 rounded-lg border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-[#2A9D8F] focus:border-transparent transition-all resize-none" style="color:#1B2F5E"></textarea>
                 </div>
                 <button type="submit" class="w-full py-4 rounded-full font-bold text-white text-sm tracking-wide transition-all duration-200 hover:opacity-90 hover:shadow-lg active:scale-[0.99]" style="background:radial-gradient(circle at 84% 12%, rgba(42,157,143,0.40) 0%, transparent 42%), radial-gradient(circle at 8% 88%, rgba(37,99,180,0.32) 0%, transparent 48%), radial-gradient(circle at 62% 106%, rgba(96,176,108,0.18) 0%, transparent 46%), radial-gradient(circle at 97% 58%, rgba(233,196,106,0.10) 0%, transparent 38%), linear-gradient(135deg, #091324 0%, #122a52 55%, #0d2140 100%)">
                   Send Message →
@@ -955,9 +993,15 @@
                 Info@trivara.ie
               </a>
             </li>
-            <li class="flex items-start gap-3 text-sm" style="color:rgba(255,255,255,0.48)">
+            <li class="flex items-start gap-3 text-sm whitespace-nowrap" style="color:rgba(255,255,255,0.48)">
               <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.61 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               +353 85 715 8111 / +353 85 715 8100
+            </li>
+            <li>
+              <a href="https://wa.me/353857158111" target="_blank" class="flex items-start gap-3 text-sm whitespace-nowrap transition-colors hover:text-[#25D366]" style="color:rgba(255,255,255,0.48)">
+                <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                WhatsApp: +353 85 715 8111
+              </a>
             </li>
             <li class="flex items-start gap-3 text-sm" style="color:rgba(255,255,255,0.48)">
               <svg class="flex-shrink-0 mt-0.5" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -1058,7 +1102,7 @@
         { id:'hc-name',  check: v => v.trim().length > 0 },
         { id:'hc-email', check: v => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) },
         { id:'hc-phone', check: v => v.trim().length > 0 },
-        { id:'hc-type',  check: v => v !== '' }
+        { id:'hc-role',  check: v => v !== '' }
       ];
       hcFields.forEach(f => {
         const el = document.getElementById(f.id);
