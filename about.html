@@ -687,7 +687,30 @@
           if (!f.check(el.value)) { el.classList.add('border-red-400'); err.classList.remove('hidden'); valid = false; }
           else { el.classList.remove('border-red-400'); err.classList.add('hidden'); }
         });
-        if (valid) { aboutForm.classList.add('hidden'); document.getElementById('about-form-success').classList.remove('hidden'); }
+        if (!valid) return;
+        const btn = aboutForm.querySelector('button[type="submit"]');
+        btn.disabled = true; btn.textContent = 'Sending…';
+        const fd = new FormData();
+        fd.append('form_source', 'About Page Contact');
+        fd.append('name',        document.getElementById('ac-name').value);
+        fd.append('email',       document.getElementById('ac-email').value);
+        fd.append('phone',       document.getElementById('ac-phone').value);
+        fd.append('role',        document.getElementById('ac-role').value);
+        fd.append('stamp_type',  document.getElementById('ac-stamp') ? document.getElementById('ac-stamp').value : '');
+        fd.append('nationality', document.getElementById('ac-nationality') ? document.getElementById('ac-nationality').value : '');
+        fd.append('website',     '');
+        fetch('mail.php', { method: 'POST', body: fd })
+          .then(r => r.json())
+          .then(data => {
+            if (data.success) {
+              aboutForm.classList.add('hidden');
+              document.getElementById('about-form-success').classList.remove('hidden');
+            } else {
+              btn.disabled = false; btn.textContent = 'Send Enquiry';
+              alert('Sorry, there was a problem sending your message. Please try again or call us directly.');
+            }
+          })
+          .catch(() => { btn.disabled = false; btn.textContent = 'Send Enquiry'; alert('Sorry, there was a problem. Please try again or call us directly.'); });
       });
     }
   </script>

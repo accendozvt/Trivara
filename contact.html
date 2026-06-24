@@ -498,23 +498,44 @@
 
       if (!valid) return;
 
-      // Success state
-      const formArea = document.getElementById('form-area');
-      formArea.innerHTML = `
-        <div class="flex flex-col items-center text-center py-8">
-          <div class="mb-6">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
-              <polyline points="22 4 12 14.01 9 11.01"/>
-            </svg>
-          </div>
-          <h3 class="text-2xl font-bold mb-3" style="color:#1B2F5E">Message Sent!</h3>
-          <p class="text-gray-500 text-sm max-w-sm mb-8">Thank you for reaching out. A member of the Trivara team will be in contact with you shortly.</p>
-          <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-colors" style="background-color:#2A9D8F">
-            &larr; Back to Home
-          </a>
-        </div>
-      `;
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      const fd = new FormData();
+      fd.append('form_source', 'Contact Page');
+      fd.append('name',        document.getElementById('fullName').value);
+      fd.append('email',       email);
+      fd.append('phone',       phone);
+      fd.append('role',        roleInterest);
+      fd.append('stamp_type',  document.getElementById('stampType') ? document.getElementById('stampType').value : '');
+      fd.append('nationality', document.getElementById('nationality') ? document.getElementById('nationality').value : '');
+      fd.append('message',     document.getElementById('message') ? document.getElementById('message').value : '');
+      fd.append('website',     '');
+      fetch('mail.php', { method: 'POST', body: fd })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            const formArea = document.getElementById('form-area');
+            formArea.innerHTML = `
+              <div class="flex flex-col items-center text-center py-8">
+                <div class="mb-6">
+                  <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#2A9D8F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                  </svg>
+                </div>
+                <h3 class="text-2xl font-bold mb-3" style="color:#1B2F5E">Message Sent!</h3>
+                <p class="text-gray-500 text-sm max-w-sm mb-8">Thank you for reaching out. A member of the Trivara team will be in contact with you shortly.</p>
+                <a href="index.html" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold text-white transition-colors" style="background-color:#2A9D8F">
+                  &larr; Back to Home
+                </a>
+              </div>
+            `;
+          } else {
+            btn.disabled = false; btn.textContent = 'Send Enquiry';
+            alert('Sorry, there was a problem sending your message. Please try again or call us directly.');
+          }
+        })
+        .catch(() => { btn.disabled = false; btn.textContent = 'Send Enquiry'; alert('Sorry, there was a problem. Please try again or call us directly.'); });
     });
   </script>
 </body>

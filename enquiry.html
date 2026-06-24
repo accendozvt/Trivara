@@ -521,11 +521,32 @@
         return;
       }
 
-      // Success, replace form with success message
-      formCard.classList.add('hidden');
-      belowCardLinks.classList.add('hidden');
-      successMessage.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      const btn = form.querySelector('button[type="submit"]');
+      btn.disabled = true; btn.textContent = 'Sending…';
+      const fd = new FormData();
+      fd.append('form_source', 'Role Enquiry Page');
+      fd.append('full_name',   document.getElementById('full-name').value);
+      fd.append('email',       document.getElementById('email').value);
+      fd.append('phone',       document.getElementById('phone').value);
+      fd.append('role',        document.getElementById('role').value);
+      fd.append('stamp_type',  document.getElementById('stamp-type') ? document.getElementById('stamp-type').value : '');
+      fd.append('nationality', document.getElementById('nationality') ? document.getElementById('nationality').value : '');
+      fd.append('message',     document.getElementById('cover-letter') ? document.getElementById('cover-letter').value : '');
+      fd.append('website',     '');
+      fetch('mail.php', { method: 'POST', body: fd })
+        .then(r => r.json())
+        .then(data => {
+          if (data.success) {
+            formCard.classList.add('hidden');
+            belowCardLinks.classList.add('hidden');
+            successMessage.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          } else {
+            btn.disabled = false; btn.textContent = 'Submit Application';
+            alert('Sorry, there was a problem sending your message. Please try again or call us directly.');
+          }
+        })
+        .catch(() => { btn.disabled = false; btn.textContent = 'Submit Application'; alert('Sorry, there was a problem. Please try again or call us directly.'); });
     });
 
     // Pre-select role from URL query param e.g. ?role=Nurse
