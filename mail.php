@@ -93,8 +93,9 @@ try {
     $mail->addAddress(MAIL_TO);
     $mail->addReplyTo($email, $name);
 
+    $mail->CharSet = 'UTF-8';
     $mail->isHTML(true);
-    $subject = $role ? "New Enquiry: {$role} — {$name}" : "New Enquiry from {$name}";
+    $subject = $role ? "New Enquiry: {$role} - {$name}" : "New Enquiry from {$name}";
     $mail->Subject = $subject;
     $mail->Body    = $body;
     $mail->AltBody = "Name: {$name}\nEmail: {$email}\nPhone: {$phone}\nRole: {$role}\nStamp: {$stamp}\nNationality: {$nationality}\nMessage: {$message}";
