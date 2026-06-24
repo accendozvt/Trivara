@@ -45,16 +45,28 @@ if (empty($name) || !filter_var($email, FILTER_VALIDATE_EMAIL) || empty($phone))
     exit;
 }
 
+// Extra fields for staff request form
+$org_name       = s($_POST['org_name'] ?? '');
+$sector         = s($_POST['sector'] ?? '');
+$staff_count    = s($_POST['staff_count'] ?? '');
+$placement_type = s($_POST['placement_type'] ?? '');
+$start_date     = s($_POST['start_date'] ?? '');
+
 // Build HTML email body
 $rows = array_filter([
-    'Source'      => $source,
-    'Name'        => $name,
-    'Email'       => "<a href='mailto:{$email}'>{$email}</a>",
-    'Phone'       => "<a href='tel:{$phone}'>{$phone}</a>",
-    'Role'        => $role,
-    'Stamp Type'  => $stamp,
-    'Nationality' => $nationality,
-    'Message'     => nl2br($message),
+    'Source'         => $source,
+    'Organisation'   => $org_name,
+    'Name'           => $name,
+    'Email'          => "<a href='mailto:{$email}'>{$email}</a>",
+    'Phone'          => "<a href='tel:{$phone}'>{$phone}</a>",
+    'Role'           => $role,
+    'Sector'         => $sector,
+    'Staff Count'    => $staff_count,
+    'Placement Type' => $placement_type,
+    'Start Date'     => $start_date,
+    'Stamp Type'     => $stamp,
+    'Nationality'    => $nationality,
+    'Message'        => nl2br($message),
 ]);
 
 $rows_html = '';

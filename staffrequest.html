@@ -484,15 +484,13 @@
       fd.append('role',         document.getElementById('roleRequired').value);
       fd.append('nationality',  '');
       fd.append('stamp_type',   '');
-      fd.append('website',      '');
-      // Extra fields specific to staff request
-      const orgName       = document.getElementById('orgName').value;
-      const sector        = document.getElementById('sector').value;
-      const staffCount    = document.getElementById('staffCount').value;
-      const placementType = document.getElementById('placementType').value;
-      const startDate     = document.getElementById('startDate').value;
-      const addInfo       = document.getElementById('additionalInfo') ? document.getElementById('additionalInfo').value : '';
-      fd.append('message', `Organisation: ${orgName}\nSector: ${sector}\nStaff Count: ${staffCount}\nPlacement Type: ${placementType}\nStart Date: ${startDate}\nAdditional Info: ${addInfo}`);
+      fd.append('website',        '');
+      fd.append('org_name',       document.getElementById('orgName').value);
+      fd.append('sector',         document.getElementById('sector').value);
+      fd.append('staff_count',    document.getElementById('staffCount').value);
+      fd.append('placement_type', document.getElementById('placementType').value);
+      fd.append('start_date',     document.getElementById('startDate').value);
+      fd.append('message',        document.getElementById('additionalInfo') ? document.getElementById('additionalInfo').value : '');
 
       fetch('mail.php', { method: 'POST', body: fd })
         .then(r => r.json())
