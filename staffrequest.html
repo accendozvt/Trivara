@@ -490,7 +490,7 @@
       fd.append('staff_count',    document.getElementById('staffCount').value);
       fd.append('placement_type', document.getElementById('placementType').value);
       fd.append('start_date',     document.getElementById('startDate').value);
-      fd.append('message',        document.getElementById('additionalInfo') ? document.getElementById('additionalInfo').value : '');
+      fd.append('message',        document.getElementById('additionalReqs') ? document.getElementById('additionalReqs').value : '');
 
       fetch('mail.php', { method: 'POST', body: fd })
         .then(r => r.json())
