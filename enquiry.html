@@ -336,6 +336,7 @@
           </div>
 
           <!-- Submit -->
+          <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAADsCbWA2HXGYNK4d"></div>
           <button
             type="submit"
             id="submit-btn"
@@ -444,6 +445,7 @@
     </div>
   </footer>
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 700, once: true, offset: 80 });
@@ -533,6 +535,7 @@
       fd.append('nationality', document.getElementById('nationality') ? document.getElementById('nationality').value : '');
       fd.append('message',     document.getElementById('cover-letter') ? document.getElementById('cover-letter').value : '');
       fd.append('website',     '');
+      fd.append('cf-turnstile-response', document.querySelector('[name="cf-turnstile-response"]') ? document.querySelector('[name="cf-turnstile-response"]').value : '');
       fetch('mail.php', { method: 'POST', body: fd })
         .then(r => r.json())
         .then(data => {

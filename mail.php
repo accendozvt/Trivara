@@ -28,6 +28,27 @@ if (!empty($_POST['website'])) {
     exit;
 }
 
+// Cloudflare Turnstile verification
+$token = $_POST['cf-turnstile-response'] ?? '';
+if (empty($token)) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Security check failed. Please refresh and try again.']);
+    exit;
+}
+$verify = curl_init('https://challenges.cloudflare.com/turnstile/v0/siteverify');
+curl_setopt_array($verify, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => http_build_query(['secret' => TURNSTILE_SECRET, 'response' => $token]),
+]);
+$result = json_decode(curl_exec($verify), true);
+curl_close($verify);
+if (empty($result['success'])) {
+    http_response_code(400);
+    echo json_encode(['success' => false, 'message' => 'Security check failed. Please try again.']);
+    exit;
+}
+
 // Collect fields (handles different field names across forms)
 $name        = s($_POST['name'] ?? $_POST['full_name'] ?? '');
 $email       = filter_var($_POST['email'] ?? '', FILTER_SANITIZE_EMAIL);

@@ -305,6 +305,7 @@
             </div>
 
             <!-- Submit -->
+            <div class="cf-turnstile mb-4" data-sitekey="0x4AAAAAADsCbWA2HXGYNK4d"></div>
             <button type="submit"
               class="w-full text-white rounded-full py-4 font-semibold transition-colors text-sm"
               style="background:radial-gradient(circle at 84% 12%, rgba(42,157,143,0.40) 0%, transparent 42%), radial-gradient(circle at 8% 88%, rgba(37,99,180,0.32) 0%, transparent 48%), radial-gradient(circle at 62% 106%, rgba(96,176,108,0.18) 0%, transparent 46%), radial-gradient(circle at 97% 58%, rgba(233,196,106,0.10) 0%, transparent 38%), linear-gradient(135deg, #091324 0%, #122a52 55%, #0d2140 100%)"
@@ -388,6 +389,7 @@
   </footer>
   <!-- END SHARED FOOTER -->
 
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 700, once: true, offset: 80 });
@@ -485,6 +487,7 @@
       fd.append('nationality',  '');
       fd.append('stamp_type',   '');
       fd.append('website',        '');
+      fd.append('cf-turnstile-response', document.querySelector('[name="cf-turnstile-response"]') ? document.querySelector('[name="cf-turnstile-response"]').value : '');
       fd.append('org_name',       document.getElementById('orgName').value);
       fd.append('sector',         document.getElementById('sector').value);
       fd.append('staff_count',    document.getElementById('staffCount').value);
